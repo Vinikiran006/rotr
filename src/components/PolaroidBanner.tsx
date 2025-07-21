@@ -5,38 +5,38 @@ const PolaroidBanner = () => {
   const topRowPolaroids = [
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?w=300&h=300&fit=crop',
-      caption: 'Tree Plantation Drive 2024',
+      image: '/lovable-uploads/image1.png',
+      caption: 'Pawsitivity',
       rotation: 'rotate-2'
     },
     {
       id: 2,
-      image: 'https://images.unsplash.com/photo-1527576539890-dfa815648363?w=300&h=300&fit=crop',
-      caption: 'Tech Workshop Success',
+      image: '/lovable-uploads/image2.png',
+      caption: 'Mind matters',
       rotation: '-rotate-1'
     },
     {
       id: 3,
-      image: 'https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=300&h=300&fit=crop',
-      caption: 'Community Health Camp',
+      image: '/lovable-uploads/image3.png',
+      caption: 'Project Disha felicitation',
       rotation: 'rotate-1'
     },
     {
       id: 4,
-      image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=300&h=300&fit=crop',
-      caption: 'Leadership Summit',
+      image: '/lovable-uploads/image4.png',
+      caption: 'Her Stories',
       rotation: '-rotate-2'
     },
     {
       id: 5,
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=300&fit=crop',
-      caption: 'Digital Literacy Program',
+      image: '/lovable-uploads/image5.png',
+      caption: 'Yes to access',
       rotation: 'rotate-2'
     },
     {
       id: 6,
-      image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=300&h=300&fit=crop',
-      caption: 'Blood Donation Drive',
+      image: '/lovable-uploads/image6.png',
+      caption: 'Rota hikes',
       rotation: '-rotate-1'
     }
   ];
@@ -44,45 +44,45 @@ const PolaroidBanner = () => {
   const bottomRowPolaroids = [
     {
       id: 7,
-      image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=300&h=300&fit=crop',
-      caption: 'Youth Leadership Program',
+      image: '/lovable-uploads/image7.png',
+      caption: 'Project Sanjeevini',
       rotation: 'rotate-1'
     },
     {
       id: 8,
-      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=300&h=300&fit=crop',
-      caption: 'Environmental Awareness',
+      image: '/lovable-uploads/image8.png',
+      caption: 'Walkathon',
       rotation: '-rotate-2'
     },
     {
       id: 9,
-      image: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=300&h=300&fit=crop',
-      caption: 'Education Outreach',
+      image: '/lovable-uploads/image9.png',
+      caption: 'Tech Mitra',
       rotation: 'rotate-2'
     },
     {
       id: 10,
-      image: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=300&h=300&fit=crop',
-      caption: 'Community Service',
+      image: '/lovable-uploads/image10.png',
+      caption: 'Snow Lit',
       rotation: '-rotate-1'
     },
     {
       id: 11,
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop',
-      caption: 'Volunteer Training',
+      image: '/lovable-uploads/image14.png',
+      caption: 'Prabodhan 3.0',
       rotation: 'rotate-1'
     },
     {
       id: 12,
-      image: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=300&h=300&fit=crop',
-      caption: 'Impact Assessment',
+      image: '/lovable-uploads/image12.png',
+      caption: 'Secret Santa',
       rotation: '-rotate-2'
     }
   ];
 
   const PolaroidCard = ({ polaroid }: { polaroid: any }) => (
     <div 
-      className={`flex-shrink-0 transform ${polaroid.rotation} hover:rotate-0 hover:scale-110 transition-all duration-500 cursor-pointer group relative`}
+      className={`flex-shrink-0 transform ${polaroid.rotation} hover:rotate-0 hover:scale-110 transition-all duration-500 group relative`}
     >
       <div className="bg-white p-4 shadow-2xl rounded-lg border border-gray-200 hover:shadow-accent-pink/20 hover:shadow-2xl">
         <img 

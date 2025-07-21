@@ -1,8 +1,8 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Calendar, User, Tag } from 'lucide-react';
+import { ArrowRight, Calendar, User, Tag, Star } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 
 const Blog = () => {
   const blogPosts = [
@@ -70,6 +70,24 @@ const Blog = () => {
 
   const categories = ["All", "Community Service", "Environment", "Leadership", "Health", "Education"];
 
+  const reviews = [
+    {
+      name: "Priya Sharma",
+      text: "Amazing experience with Rotaract BMSY! The community service projects are truly impactful.",
+      rating: 5
+    },
+    {
+      name: "Arjun Patel", 
+      text: "Great leadership opportunities and wonderful team to work with. Highly recommend joining!",
+      rating: 5
+    },
+    {
+      name: "Sneha Kumar",
+      text: "The workshops and events are well organized. Really helped me grow personally and professionally.",
+      rating: 5
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-deep-base via-section-bg to-deep-base text-white font-poppins">
       <Header />
@@ -85,23 +103,6 @@ const Blog = () => {
               Discover the impact we're making through our community service initiatives, 
               leadership programs, and youth development activities.
             </p>
-          </div>
-
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category) => (
-              <Button
-                key={category}
-                variant={category === "All" ? "default" : "outline"}
-                className={`${
-                  category === "All" 
-                    ? "bg-gradient-to-r from-accent-pink to-bright-purple text-white" 
-                    : "border-accent-pink text-accent-pink hover:bg-accent-pink hover:text-white"
-                } rounded-full px-6 py-2 transition-all duration-300 transform hover:scale-105`}
-              >
-                {category}
-              </Button>
-            ))}
           </div>
 
           {/* Blog Posts Grid */}
@@ -145,7 +146,7 @@ const Blog = () => {
                     <span className="text-xs text-gray-400">{post.readTime}</span>
                     <Button 
                       size="sm"
-                      className="bg-gradient-to-r from-accent-pink to-bright-purple hover:from-pink-bright hover:to-accent-pink text-white rounded-full group/btn transform hover:scale-105 transition-all duration-300"
+                      className="bg-gradient-to-r from-[#a020f0] via-[#ff5e62] to-[#ffcc29] hover:from-[#ff5e62] hover:to-[#ffcc29] text-white font-semibold shadow-lg border-none"
                     >
                       Read More
                       <ArrowRight className="ml-1 w-3 h-3 group-hover/btn:translate-x-1 transition-transform duration-300" />
@@ -156,15 +157,30 @@ const Blog = () => {
             ))}
           </div>
 
-          {/* Load More */}
-          <div className="text-center mt-12">
-            <Button 
-              size="lg"
-              className="bg-gradient-to-r from-bright-purple to-pink-bright hover:from-accent-pink hover:to-bright-purple text-white px-8 py-3 font-semibold rounded-full transform hover:scale-110 transition-all duration-300"
-            >
-              Load More Stories
-            </Button>
-          </div>
+          {/* Reviews Section */}
+          <section className="py-20 px-2 bg-gradient-to-br from-[#0a0612] via-[#181024] to-[#181024] mt-16 rounded-2xl shadow-xl">
+            <h2 className="text-4xl font-bold text-center mb-12 text-[#ffcc29] drop-shadow-lg">
+              What Our Members Say
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {reviews.map((review, index) => (
+                <Card
+                  key={index}
+                  className="bg-gradient-to-br from-dark-accent/30 to-purple-accent/30 backdrop-blur-sm rounded-2xl overflow-hidden group hover:bg-gradient-to-br hover:from-purple-accent/40 hover:to-bright-purple/30 transition-all duration-500 border border-accent-pink/20 hover:border-accent-pink/40 transform hover:scale-105 hover:shadow-2xl hover:shadow-accent-pink/10"
+                >
+                  <CardContent className="p-8">
+                    <div className="flex mb-4">
+                      {[...Array(review.rating)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-[#ffcc29] text-[#ffcc29] drop-shadow" />
+                      ))}
+                    </div>
+                    <p className="text-white mb-4 italic text-lg">"{review.text}"</p>
+                    <p className="text-[#b983ff] font-semibold">- {review.name}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
         </div>
       </div>
 

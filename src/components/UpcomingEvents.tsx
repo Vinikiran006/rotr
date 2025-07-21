@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -92,7 +91,7 @@ const UpcomingEvents = () => {
                 <p className="text-gray-400 text-xs mb-4">📍 {event.location}</p>
                 
                 <Button 
-                  className="w-full bg-gradient-to-r from-purple-highlight to-button-active hover:from-button-active hover:to-purple-highlight text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-button-active/50"
+                  className="bg-gradient-to-r from-[#a020f0] via-[#ff5e62] to-[#ffcc29] hover:from-[#ff5e62] hover:to-[#ffcc29] text-white font-semibold shadow-lg border-none"
                 >
                   Register Now
                 </Button>

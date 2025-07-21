@@ -1,4 +1,3 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
@@ -50,7 +49,7 @@ const Donate = () => {
             </p>
             <Button 
               size="lg"
-              className="bg-gradient-to-r from-purple-highlight to-button-active hover:from-button-active hover:to-purple-highlight text-white px-12 py-6 text-xl font-semibold transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-[#a020f0] via-[#ff5e62] to-[#ffcc29] hover:from-[#ff5e62] hover:to-[#ffcc29] text-white px-12 py-6 text-xl font-semibold transition-all duration-300 transform hover:scale-105"
             >
               Donate Now
             </Button>
@@ -105,7 +104,7 @@ const Donate = () => {
                 </p>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="flex justify-center">
                 {/* QR Code Payment */}
                 <Card className="bg-black/50 border-accent-pink/20">
                   <CardContent className="p-8 text-center">
@@ -119,53 +118,17 @@ const Donate = () => {
                     
                     {/* QR Code Placeholder */}
                     <div className="bg-white p-8 rounded-lg inline-block mb-6">
-                      <div className="w-48 h-48 bg-gray-900 rounded-lg flex items-center justify-center">
-                        <QrCode size={64} className="text-white" />
-                      </div>
+                      <img src="/lovable-uploads/nupreeth-qr.jpg" alt="UPI QR Code" className="w-48 h-48 object-contain rounded-lg" />
                     </div>
                     
                     <p className="text-sm text-gray-400 mb-4">
-                      UPI ID: rotaract.bmsy@upi
+                      UPI ID: nupreeth.off@indianbank
                     </p>
                     
                     <Button 
-                      className="bg-gradient-to-r from-purple-highlight to-button-active hover:from-button-active hover:to-purple-highlight text-white font-semibold px-8"
+                      className="bg-gradient-to-r from-[#a020f0] via-[#ff5e62] to-[#ffcc29] hover:from-[#ff5e62] hover:to-[#ffcc29] text-white font-semibold shadow-lg border-none px-8"
                     >
                       Download QR Code
-                    </Button>
-                  </CardContent>
-                </Card>
-
-                {/* Online Payment Gateway */}
-                <Card className="bg-black/50 border-accent-pink/20">
-                  <CardContent className="p-8 text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-accent-pink to-purple-highlight mb-6">
-                      <Heart size={32} className="text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4 text-white">Online Payment</h3>
-                    <p className="text-gray-300 mb-6">
-                      Use our secure online payment gateway to donate using cards, net banking, or wallets.
-                    </p>
-                    
-                    <div className="space-y-4 mb-6">
-                      <div className="bg-gradient-to-r from-purple-highlight/10 to-button-active/10 p-4 rounded-lg border border-accent-pink/20">
-                        <p className="text-white font-semibold mb-2">Accepted Payment Methods:</p>
-                        <p className="text-gray-300 text-sm">
-                          Credit Cards, Debit Cards, Net Banking, UPI, Wallets (Paytm, PhonePe, etc.)
-                        </p>
-                      </div>
-                      <div className="bg-gradient-to-r from-accent-pink/10 to-maroon-accent/10 p-4 rounded-lg border border-accent-pink/20">
-                        <p className="text-white font-semibold mb-2">Secure & Safe:</p>
-                        <p className="text-gray-300 text-sm">
-                          All transactions are encrypted and processed through Razorpay
-                        </p>
-                      </div>
-                    </div>
-                    
-                    <Button 
-                      className="bg-gradient-to-r from-accent-pink to-button-active hover:from-button-active hover:to-accent-pink text-white font-semibold px-8"
-                    >
-                      Donate Online
                     </Button>
                   </CardContent>
                 </Card>
@@ -242,7 +205,7 @@ const Donate = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button 
                 size="lg"
-                className="bg-gradient-to-r from-purple-highlight to-button-active hover:from-button-active hover:to-purple-highlight text-white px-8 py-4 text-lg font-semibold transition-all duration-300"
+                className="bg-gradient-to-r from-[#a020f0] via-[#ff5e62] to-[#ffcc29] hover:from-[#ff5e62] hover:to-[#ffcc29] text-white px-8 py-4 text-lg font-semibold transition-all duration-300"
               >
                 Make a Donation
               </Button>

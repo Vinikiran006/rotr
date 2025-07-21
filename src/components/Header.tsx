@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -46,8 +45,8 @@ const Header = () => {
                 onClick={handleNavClick}
                 className={`transition-all duration-300 font-medium font-poppins text-sm tracking-wide transform hover:scale-105 ${
                   isActive(item.href) 
-                    ? 'text-accent-pink border-b-2 border-accent-pink pb-1' 
-                    : 'text-gray-300 hover:text-accent-pink hover:border-b-2 hover:border-accent-pink hover:pb-1'
+                    ? 'text-[#ffcc29] border-b-2 border-[#ffcc29] pb-1' 
+                    : 'text-gray-300 hover:text-[#ffcc29] hover:border-b-2 hover:border-[#ffcc29] hover:pb-1'
                 }`}
               >
                 {item.name}
@@ -55,7 +54,7 @@ const Header = () => {
             ))}
             <Link to="/donate" onClick={handleNavClick}>
               <Button 
-                className="bg-gradient-to-r from-bright-purple to-pink-bright hover:from-accent-pink hover:to-bright-purple text-white px-6 py-2 font-semibold font-poppins text-sm tracking-wide transition-all duration-300 hover:shadow-lg hover:shadow-accent-pink/30 rounded-full transform hover:scale-105"
+                className="bg-gradient-to-r from-[#a020f0] via-[#ff5e62] to-[#ffcc29] text-white px-6 py-2 font-semibold font-poppins text-sm tracking-wide transition-all duration-300 rounded-full transform hover:scale-105 shadow-lg border-none"
               >
                 Donate Now
               </Button>
@@ -81,8 +80,8 @@ const Header = () => {
                   to={item.href}
                   className={`transition-colors duration-300 font-medium py-2 font-poppins ${
                     isActive(item.href) 
-                      ? 'text-accent-pink' 
-                      : 'text-gray-300 hover:text-accent-pink'
+                      ? 'text-[#ffcc29]' 
+                      : 'text-gray-300 hover:text-[#ffcc29]'
                   }`}
                   onClick={handleNavClick}
                 >
@@ -91,7 +90,7 @@ const Header = () => {
               ))}
               <Link to="/donate" onClick={handleNavClick}>
                 <Button 
-                  className="bg-gradient-to-r from-bright-purple to-pink-bright text-white w-full mt-4 rounded-full font-poppins"
+                  className="bg-gradient-to-r from-[#a020f0] via-[#ff5e62] to-[#ffcc29] text-white w-full mt-4 rounded-full font-poppins font-semibold text-sm tracking-wide px-6 py-2 transition-all duration-300 shadow-lg border-none"
                 >
                   Donate Now
                 </Button>

@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 
 const StatsSection = () => {
@@ -90,19 +89,17 @@ const StatsSection = () => {
   return (
     <section ref={sectionRef} className="py-12 bg-deep-base/95">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {stats.map((stat, index) => (
             <div 
               key={index}
-              className="text-center group"
+              className="flex flex-col items-center justify-center text-center rounded-2xl p-8 bg-gradient-to-br from-[#1a1023] to-[#1a1023]/80 border border-[#2d193c] shadow-md"
             >
-              <div className="bg-gradient-to-br from-purple-accent/20 to-bright-purple/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-highlight/20 group-hover:border-purple-highlight/40 transition-all duration-300 group-hover:scale-105">
-                <div className="text-3xl md:text-4xl font-bold mb-2 text-transparent bg-gradient-to-r from-purple-highlight to-button-active bg-clip-text">
-                  {stat.number}{stat.suffix}
-                </div>
-                <div className="text-gray-300 font-medium text-sm md:text-base">
-                  {stat.label}
-                </div>
+              <div className="text-4xl md:text-5xl font-extrabold mb-2 bg-gradient-to-r from-[#a020f0] to-[#ff5e62] text-transparent bg-clip-text">
+                {stat.number}{stat.suffix}
+              </div>
+              <div className="text-gray-100 font-semibold text-base md:text-lg">
+                {stat.label}
               </div>
             </div>
           ))}

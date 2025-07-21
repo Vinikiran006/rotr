@@ -1,4 +1,3 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
@@ -7,69 +6,70 @@ import { Linkedin, Instagram, Mail } from 'lucide-react';
 
 const Team = () => {
   const coreCouncil = [
-    {
-      id: 1,
-      name: 'Arjun Sharma',
-      role: 'President',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&face',
-      quote: 'Leading with purpose, serving with passion.',
-      department: 'Computer Science'
-    },
-    {
-      id: 2,
-      name: 'Priya Nair',
-      role: 'Vice President',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b734?w=300&h=300&fit=crop&face',
-      quote: 'Empowering youth to create meaningful change.',
-      department: 'Electronics'
-    },
-    {
-      id: 3,
-      name: 'Rahul Kumar',
-      role: 'Secretary',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&face',
-      quote: 'Organization is the key to impact.',
-      department: 'Mechanical'
-    },
-    {
-      id: 4,
-      name: 'Sneha Reddy',
-      role: 'Treasurer',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&face',
-      quote: 'Managing resources for maximum community benefit.',
-      department: 'Information Science'
-    }
+    { id: 1, name: 'Rtr. Saanvi M S', role: 'President', image: 'https://randomuser.me/api/portraits/men/1.jpg' },
+    { id: 2, name: 'Rtr. Saichandan A', role: 'Vice President', image: 'https://randomuser.me/api/portraits/women/2.jpg' },
+    { id: 3, name: 'Rtr. Anne Thyagaraj', role: 'Secretary', image: 'https://randomuser.me/api/portraits/men/3.jpg' },
+    { id: 4, name: 'Rtr. Meghana K', role: 'Joint Secretary', image: 'https://randomuser.me/api/portraits/women/4.jpg' },
+    { id: 5, name: 'Rtr. Nupreeth Mandappa K V', role: 'Treasurer', image: 'https://randomuser.me/api/portraits/women/5.jpg' },
+    { id: 6, name: 'Rtr. Varsha B', role: 'Joint Treasurer', image: 'https://randomuser.me/api/portraits/men/6.jpg' },
   ];
 
-  const directors = [
-    {
-      id: 5,
-      name: 'Vikram Singh',
-      role: 'Community Service Director',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&face',
-      department: 'Civil Engineering'
-    },
-    {
-      id: 6,
-      name: 'Ananya Gupta',
-      role: 'Public Relations Director',
-      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=300&fit=crop&face',
-      department: 'Computer Science'
-    },
-    {
-      id: 7,
-      name: 'Karthik Rao',
-      role: 'International Service Director',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&face',
-      department: 'Electronics'
-    },
-    {
-      id: 8,
-      name: 'Divya Krishnan',
-      role: 'Club Service Director',
-      image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300&h=300&fit=crop&face',
-      department: 'Information Science'
-    }
+  const sergeants = Array.from({ length: 3 }, (_, i) => ({
+    id: 10 + i,
+    name: i === 0 ? 'Rtr. Kavana P R' : i === 1 ? 'Rtr. Udbhav S Chetty' : 'Rtr. Deona Braganza',
+    image: `https://randomuser.me/api/portraits/men/${10 + i}.jpg`,
+  }));
+  const technicalDirectors = Array.from({ length: 2 }, (_, i) => ({
+    id: 20 + i,
+    name: i === 0 ? 'Rtr. Vinith S Kiran' : 'Rtr. Aishwarya JA',
+    
+    image: `https://randomuser.me/api/portraits/men/${20 + i}.jpg`,
+  }));
+  const clubServiceDirectors = Array.from({ length: 4 }, (_, i) => ({
+    id: 30 + i,
+    name: i === 0 ? 'Rtr. Gagan HS' : i === 1 ? 'Rtr. Srilakshmi' : i === 2 ? 'Rtr. Madhura C M' : `Club Service Director ${i + 1}`,
+    
+    image: `https://randomuser.me/api/portraits/women/${30 + i}.jpg`,
+  }));
+  const communityServiceDirectors = Array.from({ length: 4 }, (_, i) => ({
+    id: 40 + i,
+    name: i === 0 ? 'Rtr. Obana Pujar' : i === 1 ? 'Rtr. Parinitha V' : i === 2 ? 'Rtr. Yashvanth M' : 'Rtr. Rudra Prajapati',
+    
+    image: `https://randomuser.me/api/portraits/men/${40 + i}.jpg`,
+  }));
+  const internationalServiceDirectors = Array.from({ length: 3 }, (_, i) => ({
+    id: 50 + i,
+    name: i === 0 ? 'Rtr. Aditya Jamane' : i === 1 ? 'Rtr. Nikhil Rajesh' : 'Rtr. Diya Shetty',
+    
+    image: `https://randomuser.me/api/portraits/women/${50 + i}.jpg`,
+  }));
+  const professionalDevelopmentDirectors = Array.from({ length: 2 }, (_, i) => ({
+    id: 60 + i,
+    name: i === 0 ? 'Rtr. Disha G R' : 'Rtr. Sreshta Karthikeyan',
+    image: `https://randomuser.me/api/portraits/men/${60 + i}.jpg`,
+  }));
+  const publicRelationsDirectors = Array.from({ length: 3 }, (_, i) => ({
+    id: 70 + i,
+    name: i === 0 ? 'Rtr. J B Nidhish' : i === 1 ? 'Rtr. Malini R' : 'Rtr. Ashutosh',
+    image: `https://randomuser.me/api/portraits/women/${70 + i}.jpg`,
+  }));
+  const mediaAndDesignDirectors = Array.from({ length: 3 }, (_, i) => ({
+    id: 80 + i,
+    name: i === 0 ? 'Rtr. Mayank Gupta' : i === 1 ? 'Rtr. Saharsh Raj' : 'Rtr. Pranathi R Girimaji',
+    image: `https://randomuser.me/api/portraits/men/${80 + i}.jpg`,
+  }));
+  const editorialDirectors = Array.from({ length: 2 }, (_, i) => ({
+    id: 90 + i,
+    name: i === 0 ? 'Rtr. Keerti Bhat' : 'Rtr. Makarla Ranvitha',
+    image: `https://randomuser.me/api/portraits/women/${90 + i}.jpg`,
+  }));
+  const fellowshipChairs = Array.from({ length: 2 }, (_, i) => ({
+    id: 110 + i,
+    name: i === 0 ? 'Rtr. Ananya Gladys' : 'Rtr. Manya Rungta',
+    image: `https://randomuser.me/api/portraits/men/${110 + i}.jpg`,
+  }));
+  const clubAdvisors = [
+    { id: 100, name: 'IPP Rtr. Gaganjith R', image: 'https://randomuser.me/api/portraits/men/100.jpg' },
   ];
 
   const TeamCard = ({ member, isCore = false }) => (
@@ -93,21 +93,9 @@ const Team = () => {
         </h3>
         
         <p className="text-accent-pink font-semibold mb-2">{member.role}</p>
-        <p className="text-gray-400 text-sm mb-4">{member.department}</p>
-        
-        {member.quote && (
-          <p className="text-gray-300 text-sm italic mb-4 leading-relaxed">
-            "{member.quote}"
-          </p>
-        )}
         
         <div className="flex justify-center space-x-3">
-          <button className="w-8 h-8 bg-gradient-to-r from-purple-highlight to-button-active rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
-            <Linkedin size={16} />
-          </button>
-          <button className="w-8 h-8 bg-gradient-to-r from-purple-highlight to-button-active rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
-            <Mail size={16} />
-          </button>
+          {/* Remove the two small social buttons */}
         </div>
       </CardContent>
     </Card>
@@ -142,7 +130,7 @@ const Team = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {coreCouncil.map((member) => (
                 <TeamCard key={member.id} member={member} isCore={true} />
               ))}
@@ -150,22 +138,112 @@ const Team = () => {
           </div>
         </section>
 
-        {/* Directors */}
-        <section className="py-20 bg-section-bg">
+        {/* Club Advisor */}
+        <section className="py-12 bg-section-bg">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Directors
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                The dedicated directors leading our various service initiatives.
-              </p>
+            <h2 className="text-3xl font-bold mb-8 text-white">Immediate Past President & Club Advisor</h2>
+            <div className="flex justify-center">
+              {clubAdvisors.map((member) => <TeamCard key={member.id} member={member} />)}
             </div>
-            
+          </div>
+        </section>
+
+        {/* Sergeants at Arms */}
+        <section className="py-12 bg-section-bg">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl font-bold mb-8 text-white">Sergeant at Arms</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {sergeants.map((member) => <TeamCard key={member.id} member={member} />)}
+            </div>
+          </div>
+        </section>
+
+        {/* Technical Directors */}
+        <section className="py-12 bg-deep-base">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl font-bold mb-8 text-white">Technical Directors</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {technicalDirectors.map((member) => <TeamCard key={member.id} member={member} />)}
+            </div>
+          </div>
+        </section>
+
+        {/* Club Service Directors */}
+        <section className="py-12 bg-section-bg">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl font-bold mb-8 text-white">Club Service Directors</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {directors.map((member) => (
-                <TeamCard key={member.id} member={member} />
-              ))}
+              {clubServiceDirectors.map((member) => <TeamCard key={member.id} member={member} />)}
+            </div>
+          </div>
+        </section>
+
+        {/* Community Service Directors */}
+        <section className="py-12 bg-deep-base">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl font-bold mb-8 text-white">Community Service Directors</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {communityServiceDirectors.map((member) => <TeamCard key={member.id} member={member} />)}
+            </div>
+          </div>
+        </section>
+
+        {/* International Service Directors */}
+        <section className="py-12 bg-section-bg">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl font-bold mb-8 text-white">International Service Directors</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {internationalServiceDirectors.map((member) => <TeamCard key={member.id} member={member} />)}
+            </div>
+          </div>
+        </section>
+
+        {/* Professional Development Directors */}
+        <section className="py-12 bg-deep-base">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl font-bold mb-8 text-white">Professional Development Directors</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {professionalDevelopmentDirectors.map((member) => <TeamCard key={member.id} member={member} />)}
+            </div>
+          </div>
+        </section>
+
+        {/* Public Relations Directors */}
+        <section className="py-12 bg-section-bg">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl font-bold mb-8 text-white">Public Relations Directors</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {publicRelationsDirectors.map((member) => <TeamCard key={member.id} member={member} />)}
+            </div>
+          </div>
+        </section>
+
+        {/* Media and Design Directors */}
+        <section className="py-12 bg-deep-base">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl font-bold mb-8 text-white">Media and Design Directors</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {mediaAndDesignDirectors.map((member) => <TeamCard key={member.id} member={member} />)}
+            </div>
+          </div>
+        </section>
+
+        {/* Editorial Directors */}
+        <section className="py-12 bg-section-bg">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl font-bold mb-8 text-white">Editorial Directors</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {editorialDirectors.map((member) => <TeamCard key={member.id} member={member} />)}
+            </div>
+          </div>
+        </section>
+
+        {/* Fellowship Chair */}
+        <section className="py-12 bg-deep-base">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl font-bold mb-8 text-white">Fellowship Chair</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {fellowshipChairs.map((member) => <TeamCard key={member.id} member={member} />)}
             </div>
           </div>
         </section>
@@ -177,3 +255,4 @@ const Team = () => {
 };
 
 export default Team;
+

@@ -1,5 +1,4 @@
-
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Header from '@/components/Header';
@@ -71,6 +70,16 @@ const Contact = () => {
     }
   ];
 
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://static.elfsight.com/platform/platform.js';
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white font-poppins">
       <Header />
@@ -98,13 +107,12 @@ const Contact = () => {
         {/* Contact Info & Form */}
         <section className="py-20 bg-gradient-to-r from-gray-900 via-black to-gray-900">
           <div className="container mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="flex flex-col lg:flex-row gap-8 items-stretch">
               {/* Contact Information */}
-              <div className="space-y-8">
+              <div className="flex-1 flex flex-col justify-between h-full">
                 <h2 className="text-3xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text mb-8">
                   Contact Information
                 </h2>
-                
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4 group transform hover:scale-105 transition-all duration-300">
                     <MapPin className="w-6 h-6 text-purple-400 mt-1 group-hover:text-blue-400 transition-colors" />
@@ -124,43 +132,33 @@ const Contact = () => {
                       <p className="text-gray-300">rotaract.bmsy@gmail.com</p>
                     </div>
                   </div>
-                  
-                  <div className="flex items-start space-x-4 group transform hover:scale-105 transition-all duration-300">
-                    <Phone className="w-6 h-6 text-purple-400 mt-1 group-hover:text-blue-400 transition-colors" />
-                    <div>
-                      <h3 className="font-semibold text-white mb-1">Phone</h3>
-                      <p className="text-gray-300">+91 98765 43210</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4 group transform hover:scale-105 transition-all duration-300">
-                    <Clock className="w-6 h-6 text-purple-400 mt-1 group-hover:text-blue-400 transition-colors" />
-                    <div>
-                      <h3 className="font-semibold text-white mb-1">Meeting Hours</h3>
-                      <p className="text-gray-300">Every Friday, 4:00 PM - 6:00 PM</p>
-                    </div>
-                  </div>
                 </div>
-
                 {/* Map */}
-                <div className="mt-8">
-                  <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-lg p-4 text-center border border-purple-500/20">
-                    <div className="bg-gradient-to-br from-gray-700/50 to-gray-800/50 rounded h-48 flex items-center justify-center">
-                      <p className="text-gray-400">Interactive Map Coming Soon</p>
+                <div className="mt-8 flex-1 flex items-end">
+                  <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-lg p-4 text-center border border-purple-500/20 w-full">
+                    <div className="rounded h-80 w-full overflow-hidden flex items-center justify-center">
+                      <iframe
+                        title="BMS Institute of Technology Map"
+                        src="https://www.google.com/maps?q=BMS+Institute+of+Technology+and+Management,+Yelahanka,+Bangalore&output=embed"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0, minHeight: '320px', borderRadius: '0.75rem' }}
+                        allowFullScreen={true}
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                      ></iframe>
                     </div>
                   </div>
                 </div>
               </div>
-
               {/* Contact Form */}
-              <div>
-                <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-purple-500/30 backdrop-blur-sm">
-                  <CardContent className="p-8">
+              <div className="flex-1 flex flex-col justify-center h-full">
+                <Card className="bg-[#181024] border border-[#2d193c] shadow-lg h-full flex flex-col justify-center">
+                  <CardContent className="p-8 flex flex-col justify-center h-full">
                     <h2 className="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text mb-6">
                       Send us a Message
                     </h2>
-                    
-                    <form className="space-y-6">
+                    <form className="space-y-6 flex-1 flex flex-col justify-center">
                       <div>
                         <label className="block text-gray-300 mb-2">Name</label>
                         <input
@@ -197,9 +195,9 @@ const Contact = () => {
                         />
                       </div>
                       
-                      <Button 
+                      <Button
                         type="submit"
-                        className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white py-3 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+                        className="bg-gradient-to-r from-[#a020f0] via-[#ff5e62] to-[#ffcc29] hover:from-[#ff5e62] hover:to-[#ffcc29] text-white font-semibold shadow-lg border-none"
                       >
                         Send Message
                       </Button>
@@ -211,32 +209,7 @@ const Contact = () => {
           </div>
         </section>
 
-        {/* Reviews Section */}
-        <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
-          <div className="container mx-auto px-6">
-            <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text">
-              What Our Members Say
-            </h2>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              {reviews.map((review, index) => (
-                <Card key={index} className="bg-gradient-to-br from-gray-800/40 to-gray-900/40 border-purple-500/30 hover:border-purple-500/60 transition-all duration-500 backdrop-blur-sm transform hover:scale-105">
-                  <CardContent className="p-6">
-                    <div className="flex mb-4">
-                      {[...Array(review.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
-                    </div>
-                    <p className="text-gray-300 mb-4 italic">"{review.text}"</p>
-                    <p className="text-purple-400 font-semibold">- {review.name}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Instagram Grid */}
+        {/* Instagram Grid
         <section className="py-20 bg-gradient-to-r from-gray-900 via-black to-gray-900">
           <div className="container mx-auto px-6">
             <div className="text-center mb-12">
@@ -274,6 +247,20 @@ const Contact = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section> */}
+
+        {/* Elfsight Instagram Feed Embed */}
+        <section className="py-12 bg-black">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl font-bold text-center mb-8 text-transparent bg-gradient-to-r from-[#ffcc29] to-[#a020f0] bg-clip-text">
+              Follow Us on Instagram
+            </h2>
+            <div className="flex justify-center">
+              <div className="w-full max-w-3xl rounded-lg shadow-lg overflow-hidden">
+                <div className="elfsight-app-8b454c00-06af-4faa-9f7c-cd54e7569868" data-elfsight-app-lazy></div>
+              </div>
             </div>
           </div>
         </section>

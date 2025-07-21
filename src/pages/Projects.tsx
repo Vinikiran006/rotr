@@ -9,83 +9,220 @@ import Footer from '@/components/Footer';
 const Projects = () => {
   const projectYears = [
     {
-      year: "2024",
+      year: "RI Year 2024-2025",
       projects: [
         {
           id: 1,
-          image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=300&fit=crop',
-          title: 'Tree Plantation Drive'
+          image: '/lovable-uploads/image1.png',
+          title: 'Pawsitivity'
         },
         {
           id: 2,
-          image: 'https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=300&fit=crop',
-          title: 'Tech Workshop'
+          image: '/lovable-uploads/image2.png',
+          title: 'Mind matters'
         },
         {
           id: 3,
-          image: 'https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&h=300&fit=crop',
-          title: 'Health Camp'
+          image: '/lovable-uploads/image3.png',
+          title: 'Project Disha felicitation'
         },
         {
           id: 4,
-          image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=300&fit=crop',
-          title: 'Leadership Summit'
+          image: '/lovable-uploads/image4.png',
+          title: 'Her stories'
         },
         {
           id: 5,
-          image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop',
-          title: 'Digital Literacy'
+          image: '/lovable-uploads/image5.png',
+          title: 'Yes to access'
         },
         {
           id: 6,
-          image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=400&h=300&fit=crop',
-          title: 'Blood Donation'
-        }
+          image: '/lovable-uploads/image6.png',
+          title: 'Rota hikes'
+        },
+        {
+          id: 7,
+          image: '/lovable-uploads/image7.png',
+          title: 'Project sanjeevani'
+        },
+        {
+          id: 7,
+          image: '/lovable-uploads/image8.png',
+          title: 'Walkathon'
+        },
+        {
+          id: 7,
+          image: '/lovable-uploads/image9.png',
+          title: 'Tech Mitra'
+        },
+        {
+          id: 7,
+          image: '/lovable-uploads/image10.png',
+          title: 'Snow Lit'
+        },
+        {
+          id: 7,
+          image: '/lovable-uploads/image14.png',
+          title: 'Prabodhan 3.0'
+        },
+        {
+          id: 7,
+          image: '/lovable-uploads/image12.png',
+          title: 'Secret Santa'
+        },
+
+        
       ]
     },
     {
-      year: "2023", 
+      year: "RI Year 2023-2024", 
       projects: [
         {
           id: 7,
-          image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=300&fit=crop',
-          title: 'Community Service'
+          image: '/lovable-uploads/23-24/1.png',
+          title: 'Food for thought Phase 5'
         },
         {
           id: 8,
-          image: 'https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=400&h=300&fit=crop',
-          title: 'Environment Drive'
+          image: '/lovable-uploads/23-24/2.png',
+          title: 'Book distribution drive'
         },
         {
           id: 9,
-          image: 'https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=400&h=300&fit=crop',
-          title: 'Youth Development'
+          image: '/lovable-uploads/23-24/3.png',
+          title: 'Food for thought Phase 6'
         },
         {
           id: 10,
-          image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=300&fit=crop',
-          title: 'Skill Building'
-        }
-      ]
-    },
-    {
-      year: "2022",
-      projects: [
+          image: '/lovable-uploads/23-24/4.png',
+          title: 'Sense of belongings'
+        },
         {
           id: 11,
-          image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=300&fit=crop',
-          title: 'Social Impact'
+          image: '/lovable-uploads/23-24/5.png',
+          title: 'Plant a tree with us'
         },
         {
           id: 12,
-          image: 'https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=300&fit=crop',
+          image: '/lovable-uploads/23-24/6.png',
+          title: 'Joy of reading'
+        },
+        {
+          id: 13,
+          image: '/lovable-uploads/23-24/7.png',  
+          title: 'Dengue awareness drive'
+        },
+        {
+          id: 14,
+          image: '/lovable-uploads/23-24/8.png',
+          title: 'Decyclers'
+        },
+        {
+          id: 15,
+          image: '/lovable-uploads/23-24/9.png',
+          title: 'Threads of kindness'
+        },
+        {
+          id: 16,
+          image: '/lovable-uploads/23-24/10.png',
+          title: 'Deepavali'
+        },
+      ]
+    },
+    {
+      year: " RI Year 2022-2023",
+      projects: [
+        {
+          id: 11,
+          image: '/lovable-uploads/22-23/1.png',
+          title: 'Rota Fest'
+        },
+        {
+          id: 12,
+          image: '/lovable-uploads/22-23/2.png',
           title: 'Educational Support'
         },
         {
           id: 13,
-          image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop',
-          title: 'Community Outreach'
+            image: '/lovable-uploads/22-23/3.png',
+          title: 'Food for thought'
+        },
+        {
+          id: 14,
+          image: '/lovable-uploads/22-23/4.png',
+          title: 'Pedal for health'
+        },
+        {
+          id: 15,
+          image: '/lovable-uploads/22-23/5.png',
+          title: 'Arram flood relief drive'
+        },
+        {
+          id: 16,
+          image: '/lovable-uploads/22-23/6.png',
+          title: 'Prabodhan'
+        },
+        {
+          id: 17,
+          image: '/lovable-uploads/22-23/7.png',
+          title: 'Saksham'
+        },
+        {
+          id: 18,
+          image: '/lovable-uploads/22-23/8.png',
+          title: 'Decyclers'
+        },
+        {
+          id: 19,
+          image: '/lovable-uploads/22-23/9.png',
+          title: 'Secret Santa'
+        },
+        {
+          id: 20,
+          image: '/lovable-uploads/22-23/10.png',
+          title: 'Book donation drive'
         }
+      ]
+    },
+    {
+      year: "RI Year 2020-2021",
+      projects: [
+        {
+          id: 21,
+          image: '/lovable-uploads/20-21/1.png',
+          title: 'Lets talk pride'
+        },
+        {
+          id: 22,
+          image: '/lovable-uploads/20-21/2.png',
+          title: 'Pratyahara'
+        },
+        {
+          id: 23,
+          image: '/lovable-uploads/20-21/3.png',
+          title: 'Organ donation pledge'
+        },
+        {
+          id: 24,
+          image: '/lovable-uploads/20-21/4.png',
+          title: 'Organ donation drive'
+        },
+        {
+          id: 25,
+          image: '/lovable-uploads/20-21/5.png',
+          title: 'Donate a pad'
+        },
+        {
+          id: 26,
+          image: '/lovable-uploads/20-21/6.png',
+          title: 'Blood donation camp'
+        },
+        {
+          id: 27,
+            image: '/lovable-uploads/20-21/7.png',
+          title: 'Home agro drive'
+        },
       ]
     }
   ];
@@ -199,7 +336,7 @@ const Projects = () => {
                               <img 
                                 src={image} 
                                 alt={`${project.title} ${imgIndex + 1}`}
-                                className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                                className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"
                               />
                             </div>
                           ))}
@@ -240,7 +377,7 @@ const Projects = () => {
                               <img 
                                 src={project.image}
                                 alt={project.title}
-                                className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                                className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"
                               />
                               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                 <h4 className="text-white font-heading font-semibold text-center px-4">

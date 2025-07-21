@@ -1,14 +1,14 @@
-
 import { Instagram, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const quickLinks = [
-    { name: 'About Us', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Join Us', href: '#join' },
-    { name: 'Events', href: '#events' },
-    { name: 'Contact', href: '#contact' },
-    { name: 'Donate', href: '#donate' }
+    { name: 'About Us', to: '/' },
+    { name: 'Projects', to: '/projects' },
+    { name: 'Join Us', to: '/join' },
+    { name: 'Events', to: '/' },
+    { name: 'Contact', to: '/contact' },
+    { name: 'Donate', to: '/donate' }
   ];
 
   return (
@@ -34,13 +34,13 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-6 text-accent-pink">Quick Links</h4>
             <div className="grid grid-cols-2 gap-3">
               {quickLinks.map((link) => (
-                <a 
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.to}
                   className="text-gray-300 hover:text-accent-pink transition-colors duration-300"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -53,22 +53,23 @@ const Footer = () => {
                 📧 rotaract@bmsinstitute.com
               </p>
               <p className="text-gray-300">
-                📱 +91 99999 99999
-              </p>
-              <p className="text-gray-300">
                 📍 BMS Institute of Technology, Yelahanka, Bangalore
               </p>
             </div>
             
             <div className="flex space-x-4">
               <a 
-                href="#" 
+                href="https://instagram.com/rota_bms" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-gradient-to-r from-accent-pink to-bright-purple rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
               >
                 <Instagram size={20} />
               </a>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/company/rotaract-club-bms-yelahanka/" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-gradient-to-r from-accent-pink to-bright-purple rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
               >
                 <Linkedin size={20} />

@@ -1,4 +1,3 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
@@ -73,12 +72,14 @@ const JoinUs = () => {
               Be part of a dynamic community of young leaders committed to creating positive change. 
               Develop skills, build networks, and make a lasting impact.
             </p>
-            <Button 
-              size="lg"
-              className="bg-gradient-to-r from-purple-highlight to-button-active hover:from-button-active hover:to-purple-highlight text-white px-12 py-6 text-xl font-semibold transition-all duration-300 transform hover:scale-105"
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSej0Dum4THRYocF3CiHyE1EzpmRthnCd-TbiVmY1bZES5qV6g/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-gradient-to-r from-[#a020f0] via-[#ff5e62] to-[#ffcc29] hover:from-[#ff5e62] hover:to-[#ffcc29] text-white px-6 py-3 text-base font-semibold transition-all duration-300 transform hover:scale-105 border-none shadow-lg rounded-full"
             >
               Start Your Journey
-            </Button>
+            </a>
           </div>
         </section>
 
@@ -140,16 +141,18 @@ const JoinUs = () => {
                       </p>
                     </div>
                     
-                    {/* Placeholder for Google Form */}
-                    <div className="bg-black/30 rounded-lg p-8 text-center border-2 border-dashed border-accent-pink/30">
-                      <Globe className="mx-auto mb-4 text-accent-pink" size={48} />
-                      <h4 className="text-xl font-semibold text-white mb-2">Google Form Integration</h4>
-                      <p className="text-gray-300 mb-4">
-                        The registration form will be embedded here. Contact the web team to integrate your Google Form.
-                      </p>
-                      <Button className="bg-gradient-to-r from-purple-highlight to-button-active hover:from-button-active hover:to-purple-highlight text-white">
-                        Open Registration Form
-                      </Button>
+                    <div className="w-full flex justify-center">
+                      <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSej0Dum4THRYocF3CiHyE1EzpmRthnCd-TbiVmY1bZES5qV6g/viewform?embedded=true"
+                        width="100%"
+                        height={460}
+                        frameBorder={0}
+                        title="Rotaract Registration Form"
+                        className="rounded-lg border-none w-full max-w-2xl"
+                        allowFullScreen
+                      >
+                        Loading…
+                      </iframe>
                     </div>
                   </div>
                 </CardContent>
