@@ -59,7 +59,7 @@ const Contact = () => {
           <div className="container mx-auto px-6 text-center">
             <div className="mb-8 flex justify-center animate-fade-in">
               <img 
-                src="/lovable-uploads/5d412404-e118-4763-a5fb-69304897cc03.png" 
+                src="/logos/logo.png" 
                 alt="Rotaract Club Logos" 
                 className="h-20 w-auto"
               />
@@ -183,19 +183,23 @@ const Contact = () => {
           </div>
         </section>
 
-        {/* Elfsight Instagram Feed Embed */}
+       {/* Elfsight Instagram Feed Embed */}
         <section className="py-12 bg-black">
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center mb-8 text-transparent bg-gradient-to-r from-[#ffcc29] to-[#a020f0] bg-clip-text">
               Follow Us on Instagram
             </h2>
             <div className="flex justify-center">
-              <div className="w-full max-w-3xl rounded-lg shadow-lg overflow-hidden">
-                <div className="elfsight-app-8b454c00-06af-4faa-9f7c-cd54e7569868" data-elfsight-app-lazy></div>
+              <div className="w-full sm:w-11/12 md:w-9/12 max-w-3xl bg-black/20 rounded-lg p-4 sm:p-6 shadow-xl overflow-visible">
+                <div
+                  className="elfsight-app-8b454c00-06af-4faa-9f7c-cd54e7569868"
+                  data-elfsight-app-lazy
+                ></div>
               </div>
             </div>
           </div>
         </section>
+
       </div>
 
       <Footer />

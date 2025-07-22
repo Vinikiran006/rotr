@@ -135,6 +135,10 @@ export default {
         "fade-in": "fade-in 0.8s ease-out forwards",
         "float": "float 6s ease-in-out infinite",
         "glow": "glow 2s ease-in-out infinite",
+
+        // 🚀 Faster scrolls for mobile
+        "scroll-fast": "scroll 9s linear infinite",
+        "scroll-reverse-fast": "scroll-reverse 11s linear infinite",
       },
     },
   },

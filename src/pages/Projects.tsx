@@ -268,7 +268,7 @@ const Projects = () => {
                   value="ongoing" 
                   className="data-[state=active]:bg-purple-highlight data-[state=active]:text-white font-heading"
                 >
-                  Projects of the Year 2025-26
+                  Projects of 2025-26
                 </TabsTrigger>
                 <TabsTrigger 
                   value="previous"

@@ -23,8 +23,12 @@ const Index = () => {
     { icon: <Baby className="w-8 h-8" />, title: "Maternal and Child Health", description: "Supporting mothers and children to reduce mortality and improve health and nutrition." },
     { icon: <BookOpen className="w-8 h-8" />, title: "Basic Education and Literacy", description: "Promoting literacy and education for children and adults to build brighter futures." },
     { icon: <Coins className="w-8 h-8" />, title: "Community Economic Development", description: "Strengthening local economies and creating opportunities for sustainable growth." },
-    { icon: <Globe className="w-8 h-8" />, title: "Environment", description: "Protecting the environment and promoting sustainable practices for a greener planet." }
+    { icon: <Globe className="w-8 h-8" />, title: "Environment", description: "Protecting the environment and promoting sustainable practices for a greener planet." },
   ];
+
+  // Split for two-row display: first row = 4, second row = 3
+  const firstRow = initiatives.slice(0, 4);
+  const secondRow = initiatives.slice(4, 7);
 
   const panelGradient =
     "bg-gradient-to-br from-dark-accent/50 to-purple-accent/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-highlight/20 shadow flex flex-col justify-center font-poppins";
@@ -34,10 +38,21 @@ const Index = () => {
       <Header />
 
       {/* Logo Section */}
-      <div className="flex justify-center items-center gap-14 mt-24 mb-10">
-        <img src="/logos/rotaract-district.png" alt="Rotaract District Logo" className="h-20 w-auto object-contain" style={{ minWidth: 96 }} />
-        <img src="/logos/bms-yelahanka.jpeg" alt="BMS Yelahanka Logo" className="h-20 w-auto object-contain" style={{ minWidth: 96 }} />
-        <img src="/logos/unite-for-good.png" alt="Unite for Good Logo" className="h-20 w-auto object-contain" style={{ minWidth: 96 }} />
+      <div className="flex justify-center items-center gap-4 sm:gap-10 md:gap-14 mt-24 mb-10 overflow-x-auto">
+        <img src="/logos/rotaract-district.png" alt="Rotaract District Logo" className="h-16 sm:h-20 w-auto object-contain" />
+        <img src="/logos/bms-yelahanka.jpeg" alt="BMS Yelahanka Logo" className="h-16 sm:h-20 w-auto object-contain" />
+        {/* Desktop/Tablet Third Logo */}
+        <img
+          src="/logos/unite-for-good.png"
+          alt="Unite for Good Logo"
+          className="hidden sm:block h-16 sm:h-20 w-auto object-contain"
+        />
+        {/* Mobile-Only Small Third Logo */}
+        <img
+          src="/rotaract-logo.png"
+          alt="Unite for Good Logo Small"
+          className="block sm:hidden h-10 w-auto object-contain"
+        />
       </div>
 
       {/* What is Rotary & What is Rotaract */}
@@ -97,7 +112,6 @@ const Index = () => {
                 <p>
                   A global network for young leaders (ages 18–30) that empowers them to take action, develop leadership skills, and create global friendships.
                 </p>
-                
                 <div className="flex items-center justify-center space-x-8 mt-2">
                   <div className="text-center">
                     <div className="text-xl font-bold text-[#ffcc29]">1.4M+</div>
@@ -164,7 +178,7 @@ const Index = () => {
       {/* Moments That Matter (Polaroid Banner) */}
       <PolaroidBanner />
 
-      {/* Initiatives Section */}
+      {/* Initiatives Section - 4 in first row, 3 in second row */}
       <section className="py-16 bg-gradient-to-br from-deep-base via-section-bg to-deep-base">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
@@ -175,8 +189,28 @@ const Index = () => {
               Seven key pillars that drive our mission to create lasting positive change
             </p>
           </div>
-          <div className="grid md:grid-cols-4 lg:grid-cols-4 gap-6">
-            {initiatives.map((initiative, index) => (
+          {/* First Row: 4 Columns */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-6">
+            {firstRow.map((initiative, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-dark-accent/50 to-purple-accent/50 backdrop-blur-sm rounded-2xl p-6 text-center group hover:bg-gradient-to-br hover:from-purple-accent/30 hover:to-bright-purple/30 transition-all duration-500 border border-purple-highlight/20 hover:border-purple-highlight/50 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-highlight/10"
+              >
+                <div className="text-purple-highlight mb-4 flex justify-center group-hover:scale-125 transition-transform duration-500">
+                  {initiative.icon}
+                </div>
+                <h3 className="text-lg font-semibold mb-3 text-white group-hover:text-button-active transition-colors duration-300 font-poppins">
+                  {initiative.title}
+                </h3>
+                <p className="text-gray-300 leading-relaxed font-light text-sm font-poppins">
+                  {initiative.description}
+                </p>
+              </div>
+            ))}
+          </div>
+          {/* Second Row: 3 Columns, Centered */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
+            {secondRow.map((initiative, index) => (
               <div
                 key={index}
                 className="bg-gradient-to-br from-dark-accent/50 to-purple-accent/50 backdrop-blur-sm rounded-2xl p-6 text-center group hover:bg-gradient-to-br hover:from-purple-accent/30 hover:to-bright-purple/30 transition-all duration-500 border border-purple-highlight/20 hover:border-purple-highlight/50 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-highlight/10"
@@ -196,8 +230,6 @@ const Index = () => {
         </div>
       </section>
 
-   
-
       {/* Call to Action block */}
       <section className="py-16 bg-gradient-to-br from-deep-base via-dark-purple/20 to-deep-base">
         <div className="container mx-auto px-6 text-center">
@@ -208,17 +240,17 @@ const Index = () => {
             Join a community of passionate young leaders committed to creating positive change.
             Your journey of service and growth starts here.
           </p>
-             {/* Upcoming Events Section (just before Call to Action) */}
-      <section className="py-6">
-        <div className="container mx-auto px-6">
-          <div className={`${panelGradient} max-w-lg mx-auto text-center`}>
-            <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-highlight to-bright-purple bg-clip-text text-transparent mb-2 font-poppins">
-              Upcoming Events
-            </h2>
-            <p className="text-lg text-gray-200 font-poppins">Stay tuned!!</p>
-          </div>
-        </div>
-      </section>
+          {/* Upcoming Events Section (just before Call to Action) */}
+          <section className="py-6">
+            <div className="container mx-auto px-6">
+              <div className={`${panelGradient} max-w-lg mx-auto text-center`}>
+                <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-highlight to-bright-purple bg-clip-text text-transparent mb-2 font-poppins">
+                  Upcoming Events
+                </h2>
+                <p className="text-lg text-gray-200 font-poppins">Stay tuned!!</p>
+              </div>
+            </div>
+          </section>
           <Link to="/join">
             <Button
               size="lg"
