@@ -7,8 +7,8 @@ const UpcomingEvents = () => {
   const events = [
     {
       id: 1,
-      title: 'Clean Water Initiative',
-      date: 'July 15, 2024',
+      title: '8th Club Anniversary',
+      date: 'July 6, 2025',
       time: '9:00 AM',
       location: 'Yelahanka Lake',
       description: 'Join us for a community clean-up drive and water quality awareness program.',
@@ -27,17 +27,7 @@ const UpcomingEvents = () => {
       category: 'Education',
       registrations: 32
     },
-    {
-      id: 3,
-      title: 'Health & Wellness Camp',
-      date: 'July 28, 2024',
-      time: '8:00 AM',
-      location: 'Community Center',
-      description: 'Free health checkups, blood donation drive, and wellness consultations.',
-      image: 'https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&h=300&fit=crop',
-      category: 'Health',
-      registrations: 67
-    }
+    
   ];
 
   return (

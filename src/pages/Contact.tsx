@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { MapPin, Phone, Mail, Clock, Star } from 'lucide-react';
+import { MapPin, Mail, Star } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,12 +12,24 @@ const Contact = () => {
     message: ''
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://static.elfsight.com/platform/platform.js';
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   const reviews = [
     {
@@ -37,53 +49,10 @@ const Contact = () => {
     }
   ];
 
-  const instagramPosts = [
-    {
-      id: 1,
-      image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?w=300&h=300&fit=crop',
-      caption: 'Tree Plantation Drive 2024'
-    },
-    {
-      id: 2,
-      image: 'https://images.unsplash.com/photo-1527576539890-dfa815648363?w=300&h=300&fit=crop',
-      caption: 'Tech Workshop Success'
-    },
-    {
-      id: 3,
-      image: 'https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=300&h=300&fit=crop',
-      caption: 'Health Camp Initiative'
-    },
-    {
-      id: 4,
-      image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=300&h=300&fit=crop',
-      caption: 'Leadership Development'
-    },
-    {
-      id: 5,
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=300&fit=crop',
-      caption: 'Community Outreach'
-    },
-    {
-      id: 6,
-      image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=300&h=300&fit=crop',
-      caption: 'Blood Donation Camp'
-    }
-  ];
-
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://static.elfsight.com/platform/platform.js';
-    script.async = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white font-poppins">
       <Header />
-      
+
       <div className="pt-24">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
@@ -124,7 +93,6 @@ const Contact = () => {
                       </p>
                     </div>
                   </div>
-                  
                   <div className="flex items-start space-x-4 group transform hover:scale-105 transition-all duration-300">
                     <Mail className="w-6 h-6 text-purple-400 mt-1 group-hover:text-blue-400 transition-colors" />
                     <div>
@@ -151,105 +119,69 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
+
               {/* Contact Form */}
-              <div className="flex-1 flex flex-col justify-center h-full">
-                <Card className="bg-[#181024] border border-[#2d193c] shadow-lg h-full flex flex-col justify-center">
-                  <CardContent className="p-8 flex flex-col justify-center h-full">
-                    <h2 className="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text mb-6">
-                      Send us a Message
-                    </h2>
-                    <form className="space-y-6 flex-1 flex flex-col justify-center">
-                      <div>
-                        <label className="block text-gray-300 mb-2">Name</label>
-                        <input
-                          type="text"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white focus:border-purple-400 focus:outline-none transition-all duration-300"
-                          placeholder="Your full name"
-                        />
-                      </div>
-                      
-                      <div>
-                        <label className="block text-gray-300 mb-2">Email</label>
-                        <input
-                          type="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white focus:border-purple-400 focus:outline-none transition-all duration-300"
-                          placeholder="your.email@example.com"
-                        />
-                      </div>
-                      
-                      <div>
-                        <label className="block text-gray-300 mb-2">Message</label>
-                        <textarea
-                          name="message"
-                          value={formData.message}
-                          onChange={handleInputChange}
-                          rows={5}
-                          className="w-full px-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white focus:border-purple-400 focus:outline-none resize-none transition-all duration-300"
-                          placeholder="Tell us how you'd like to get involved..."
-                        />
-                      </div>
-                      
-                      <Button
-                        type="submit"
-                        className="bg-gradient-to-r from-[#a020f0] via-[#ff5e62] to-[#ffcc29] hover:from-[#ff5e62] hover:to-[#ffcc29] text-white font-semibold shadow-lg border-none"
-                      >
-                        Send Message
-                      </Button>
-                    </form>
-                  </CardContent>
-                </Card>
-              </div>
+              <form
+                action="https://formspree.io/f/mgvzogvz"
+                method="POST"
+                className="space-y-6 flex-1 flex flex-col justify-center"
+              >
+                <input type="hidden" name="_replyto" value={formData.email} />
+                <input type="hidden" name="_subject" value="New Contact Form Message" />
+
+                {/* Name Field */}
+                <div>
+                  <label className="block text-gray-300 mb-2">Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white focus:border-purple-400 focus:outline-none transition-all duration-300"
+                    placeholder="Your full name"
+                  />
+                </div>
+
+                {/* Email Field */}
+                <div>
+                  <label className="block text-gray-300 mb-2">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white focus:border-purple-400 focus:outline-none transition-all duration-300"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+
+                {/* Message Field */}
+                <div>
+                  <label className="block text-gray-300 mb-2">Message</label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    rows={5}
+                    required
+                    className="w-full px-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white focus:border-purple-400 focus:outline-none resize-none transition-all duration-300"
+                    placeholder="Tell us how you'd like to get involved..."
+                  />
+                </div>
+
+                {/* Submit Button */}
+                <Button
+                  type="submit"
+                  className="bg-gradient-to-r from-[#a020f0] via-[#ff5e62] to-[#ffcc29] hover:from-[#ff5e62] hover:to-[#ffcc29] text-white font-semibold shadow-lg border-none"
+                >
+                  Send Message
+                </Button>
+              </form>
             </div>
           </div>
         </section>
-
-        {/* Instagram Grid
-        <section className="py-20 bg-gradient-to-r from-gray-900 via-black to-gray-900">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text mb-4">
-                Follow Us on Instagram
-              </h2>
-              <p className="text-gray-300 mb-6">
-                Stay updated with our latest activities and events
-              </p>
-              <a 
-                href="https://www.instagram.com/rota_bms/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-purple-400 hover:text-blue-400 transition-colors font-semibold"
-              >
-                @rota_bms
-              </a>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {instagramPosts.map((post) => (
-                <div 
-                  key={post.id}
-                  className="group cursor-pointer relative overflow-hidden rounded-lg hover:scale-110 transition-all duration-500 border border-purple-500/20 hover:border-purple-400/60"
-                >
-                  <img 
-                    src={post.image}
-                    alt={post.caption}
-                    className="w-full h-32 md:h-40 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-2">
-                    <p className="text-white text-xs text-center font-medium">
-                      {post.caption}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section> */}
 
         {/* Elfsight Instagram Feed Embed */}
         <section className="py-12 bg-black">

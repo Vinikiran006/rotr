@@ -180,20 +180,12 @@ const Donate = () => {
                 </Card>
               </div>
               
-              <div className="mt-12">
-                <Button 
-                  variant="outline"
-                  className="border-accent-pink text-accent-pink hover:bg-accent-pink hover:text-white px-8 py-3 text-lg font-semibold transition-all duration-300"
-                >
-                  View Financial Reports
-                </Button>
-              </div>
             </div>
           </div>
         </section>
 
         {/* Thank You Section */}
-        <section className="py-20 bg-section-bg">
+        <section className="py-18 bg-section-bg">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Thank You for Your Support
@@ -202,21 +194,7 @@ const Donate = () => {
               Every donation, no matter the size, makes a significant difference in someone's life. 
               Together, we can build a better future for our community.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button 
-                size="lg"
-                className="bg-gradient-to-r from-[#a020f0] via-[#ff5e62] to-[#ffcc29] hover:from-[#ff5e62] hover:to-[#ffcc29] text-white px-8 py-4 text-lg font-semibold transition-all duration-300"
-              >
-                Make a Donation
-              </Button>
-              <Button 
-                variant="outline"
-                size="lg"
-                className="border-accent-pink text-accent-pink hover:bg-accent-pink hover:text-white px-8 py-4 text-lg font-semibold transition-all duration-300"
-              >
-                Share Our Mission
-              </Button>
-            </div>
+            
           </div>
         </section>
       </div>
