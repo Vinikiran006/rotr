@@ -230,59 +230,16 @@ const Projects = () => {
   const ongoingProjects = [
     {
       id: 1,
-      title: 'Digital Literacy for Seniors',
+      title: '8th Club Anniversary',
       images: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=300&fit=crop'
+        'ongoingp//o11.jpeg',
+        'ongoingp//o12.jpeg',
+        'ongoingp//o13.jpeg',
+        'ongoingp//o14.jpeg'
       ],
-      description: 'Teaching basic computer and smartphone skills to elderly citizens in our community.'
+      description: 'Our 8th Club Anniversary was a day filled with joy, love, and unforgettable memories! We marked this special occasion at a local orphanage, where the Rotaract spirit truly came alive. The celebration featured vibrant music, energetic dance performances, and lots of shared laughter. '
     },
-    {
-      id: 2,
-      title: 'Clean Water Initiative',
-      images: [
-        'https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&h=300&fit=crop'
-      ],
-      description: 'Installing water purification systems and conducting awareness programs.'
-    },
-    {
-      id: 3,
-      title: 'Skill Development Workshops',
-      images: [
-        'https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop'
-      ],
-      description: 'Conducting workshops on coding, entrepreneurship, and communication skills.'
-    },
-    {
-      id: 4,
-      title: 'Health and Wellness Program',
-      images: [
-        'https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&h=300&fit=crop'
-      ],
-      description: 'Regular health checkups and wellness programs for underprivileged communities.'
-    },
-    {
-      id: 5,
-      title: 'Environmental Conservation',
-      images: [
-        'https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=300&fit=crop'
-      ],
-      description: 'Tree plantation drives and plastic waste management initiatives.'
-    }
+
   ];
 
   return (
