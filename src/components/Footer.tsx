@@ -50,7 +50,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-6 text-accent-pink">Connect With Us</h4>
             <div className="space-y-3 mb-6">
               <p className="text-gray-300">
-                📧 rotaract@bmsinstitute.com
+                📧 rcbmsy@bmsit.in
               </p>
               <p className="text-gray-300">
                 📍 BMS Institute of Technology, Yelahanka, Bangalore

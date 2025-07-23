@@ -7,7 +7,7 @@ import { Linkedin, Instagram, Mail } from 'lucide-react';
 const Team = () => {
   const coreCouncil = [
     { id: 1, name: 'Rtr. Saanvi M S', role: 'President', image: '/team/Saanvi.jpg' },
-    { id: 2, name: 'Rtr. Saichandan A', role: 'Vice President', image: '/team/.jpg' },
+    { id: 2, name: 'Rtr. Saichandan A', role: 'Vice President', image: '/team/sai.png' },
     { id: 3, name: 'Rtr. Anne Thyagaraj', role: 'Secretary', image: '/team/Anne.jpg' },
     { id: 4, name: 'Rtr. Meghana K', role: 'Joint Secretary', image: '/team/meghan.jpg' },
     { id: 5, name: 'Rtr. Nupreeth Mandappa K V', role: 'Treasurer', image: '/team/NUPREETH.jpeg' },
@@ -25,7 +25,7 @@ const Team = () => {
   ];
   const clubServiceDirectors = [
     { id: 31, name: 'Rtr. Gagan HS', image: '/team/GaganHS.jpeg' },
-    { id: 32, name: 'Rtr. Srilakshmi', image: '/team/IMG_7020 - Malini R CSE-6.jpeg' },
+    { id: 32, name: 'Rtr. Srilakshmi', image: '/team/srilakshmi.jpg' },
     { id: 33, name: 'Rtr. Madhura C M', image: '/team/IMG_20250608_230420 - Madhura C M IS-2023-27.jpg' },
     
   ];

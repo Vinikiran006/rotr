@@ -50,7 +50,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white font-poppins">
+    <div className="min-h-screen overflow-x-hidden bg-gradient-to-br from-black via-gray-900 to-black text-white font-poppins">
       <Header />
 
       <div className="pt-24">
@@ -97,9 +97,9 @@ const Contact = () => {
                     <Mail className="w-6 h-6 text-purple-400 mt-1 group-hover:text-blue-400 transition-colors" />
                     <div>
                       <h3 className="font-semibold text-white mb-1">Email</h3>
-                      <p className="text-gray-300">rotaract.bmsy@gmail.com</p>
+                      <p className="text-gray-300">rcbmsy@bmsit.in</p>
                     </div>
-                  </div>
+                  </div>  
                 </div>
                 {/* Map */}
                 <div className="mt-8 flex-1 flex items-end">
