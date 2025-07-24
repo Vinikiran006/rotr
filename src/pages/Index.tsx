@@ -183,7 +183,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-gradient-to-r from-purple-highlight to-bright-purple bg-clip-text font-poppins">
-              Our Impact Areas
+              Rotary's 7 areas of focus
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto font-light font-poppins">
               Seven key pillars that drive our mission to create lasting positive change

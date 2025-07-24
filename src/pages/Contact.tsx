@@ -122,7 +122,7 @@ const Contact = () => {
 
               {/* Contact Form */}
               <form
-                action="https://formspree.io/f/mgvzogvz"
+                action="https://formspree.io/f/mgvzajew"
                 method="POST"
                 className="space-y-6 flex-1 flex flex-col justify-center"
               >
