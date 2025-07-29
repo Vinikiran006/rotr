@@ -26,34 +26,62 @@ const Index = () => {
     { icon: <Globe className="w-8 h-8" />, title: "Environment", description: "Protecting the environment and promoting sustainable practices for a greener planet." },
   ];
 
-  // Split for two-row display: first row = 4, second row = 3
   const firstRow = initiatives.slice(0, 4);
   const secondRow = initiatives.slice(4, 7);
 
   const panelGradient =
-    "bg-gradient-to-br from-dark-accent/50 to-purple-accent/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-highlight/20 shadow flex flex-col justify-center font-poppins";
+    "bg-gradient-to-br from-dark-accent/50 to-purple-accent/50 backdrop-blur-sm border border-purple-highlight/20 shadow flex flex-col justify-center font-poppins";
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-deep-base via-section-bg to-deep-base text-white font-poppins overflow-x-hidden">
       <Header />
 
-      {/* Logo Section */}
-      <div className="flex justify-center items-center gap-4 sm:gap-10 md:gap-14 mt-24 mb-10 overflow-x-auto">
+      {/* Logo Section - Remove any bottom margin */}
+      <div className="flex justify-center items-center gap-4 sm:gap-10 md:gap-14 mt-24 mb-0 overflow-x-auto">
         <img src="/logos/rotaract-district.png" alt="Rotaract District Logo" className="h-16 sm:h-20 w-auto object-contain" />
         <img src="/logos/bms-yelahanka.jpeg" alt="BMS Yelahanka Logo" className="h-16 sm:h-20 w-auto object-contain" />
-        {/* Desktop/Tablet Third Logo */}
         <img
           src="/logos/unite-for-good.png"
           alt="Unite for Good Logo"
           className="hidden sm:block h-16 sm:h-20 w-auto object-contain"
         />
-        {/* Mobile-Only Small Third Logo */}
         <img
           src="/rotaract-logo.png"
           alt="Unite for Good Logo Small"
           className="block sm:hidden h-10 w-auto object-contain"
         />
       </div>
+
+    <section
+  className="relative flex flex-col items-center justify-center min-h-[60vw] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[650px] mb-0 mx-0 overflow-hidden shadow-xl w-full bg-black"
+  style={{ borderRadius: 0, paddingTop: 0 }}
+>
+  <img
+    src="/hero-bg.jpg"
+    alt=""
+    className="absolute inset-0 w-full h-full object-cover"
+    aria-hidden="true"
+    draggable="false"
+    style={{ zIndex: 1, objectPosition: 'center center' }}
+  />
+  <div
+    className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/5 to-transparent"
+    style={{ zIndex: 2 }}
+    aria-hidden="true"
+  />
+  <div className="relative z-10 flex flex-col items-center px-2 py-8 sm:px-8 w-full">
+    <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-center font-poppins
+      bg-gradient-to-r from-[#fffbe0] via-[#ffd700] to-[#bf5af2] text-transparent bg-clip-text drop-shadow-[0_2px_12px_#000]">
+      Welcome to Rotaract Club of BMS Yelahanka
+    </h1>
+    <p className="max-w-xl mx-auto text-base sm:text-lg md:text-lg mb-5 text-center font-poppins text-[#FFFBEA] font-medium drop-shadow-[0_1px_8px_#000]">
+      Empowering young leaders to create positive change through service, fellowship, and professional development.
+    </p>
+    {/* ...buttons... */}
+  </div>
+</section>
+
+
 
       {/* What is Rotary & What is Rotaract */}
       <section className="py-8">
@@ -138,40 +166,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Us Section */}
-      <section className="py-10">
-        <div className="container mx-auto px-6">
-          <div className={`${panelGradient} max-w-5xl mx-auto items-center text-center`}>
-            <h2 className="text-3xl font-bold text-transparent bg-gradient-to-r from-purple-highlight to-bright-purple bg-clip-text mb-3 font-poppins">
-              About Us
-            </h2>
-            <p className="text-lg text-gray-200 mb-3 font-poppins">
-              The Rotaract Club of BMS Institute of Technology, Yelahanka, is a vibrant hub of youth leadership and community-driven initiatives. Our journey is defined by meaningful projects and impactful service, rooted in our unwavering commitment to building a better tomorrow.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center my-4">
-              <Link to="/join">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-[#a020f0] via-[#ff5e62] to-[#ffcc29] hover:from-[#ff5e62] hover:to-[#ffcc29] text-white px-8 py-3 text-base font-semibold transition-all duration-500 rounded-full group transform hover:scale-110 shadow-lg border-none font-poppins"
-                >
-                  Join Our Community
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
-                </Button>
-              </Link>
-              <Link to="/projects">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-2 border-[#ffcc29] text-[#ffcc29] bg-transparent hover:bg-[#ffcc29] hover:text-black px-8 py-3 text-base font-semibold transition-all duration-500 rounded-full transform hover:scale-110 shadow-none font-poppins"
-                >
-                  Explore Projects
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Stats Section */}
       <StatsSection />
 
@@ -240,7 +234,6 @@ const Index = () => {
             Join a community of passionate young leaders committed to creating positive change.
             Your journey of service and growth starts here.
           </p>
-          {/* Upcoming Events Section (just before Call to Action) */}
           <section className="py-6">
             <div className="container mx-auto px-6">
               <div className={`${panelGradient} max-w-lg mx-auto text-center`}>

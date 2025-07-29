@@ -54,24 +54,29 @@ const Contact = () => {
       <Header />
 
       <div className="pt-24">
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
-          <div className="container mx-auto px-6 text-center">
-            <div className="mb-8 flex justify-center animate-fade-in">
-              <img 
-                src="/logos/logo.png" 
-                alt="Rotaract Club Logos" 
-                className="h-20 w-auto"
-              />
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-transparent bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text">
-              Get In Touch
-            </h1>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Ready to make a difference? Connect with us and be part of the change you want to see in the world.
-            </p>
-          </div>
-        </section>
+
+        {/* Hero Section - uses group photo, fully responsive, no logos */}
+        <section
+  className="relative flex items-center w-full min-h-[60vw] sm:min-h-[45vw] md:min-h-[38vw] lg:min-h-[32vw] overflow-hidden"
+  style={{
+    backgroundImage: "url('/contact-us.png')",
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center bottom',
+    backgroundColor: '#111111'
+  }}
+>
+  {/* Lighter, subtle overlay for text readability without darkening faces */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black/45 to-black/10 z-0 pointer-events-none" />
+  <div className="relative z-10 w-full text-center px-4 py-10 sm:py-16 flex flex-col items-center">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+      Get In Touch
+    </h1>
+    <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl md:max-w-3xl mx-auto mb-2">
+      Ready to make a difference? Connect with us and be part of the change you want to see in the world.
+    </p>
+  </div>
+</section>
 
         {/* Contact Info & Form */}
         <section className="py-20 bg-gradient-to-r from-gray-900 via-black to-gray-900">
@@ -99,7 +104,7 @@ const Contact = () => {
                       <h3 className="font-semibold text-white mb-1">Email</h3>
                       <p className="text-gray-300">rcbmsy@bmsit.in</p>
                     </div>
-                  </div>  
+                  </div>
                 </div>
                 {/* Map */}
                 <div className="mt-8 flex-1 flex items-end">
@@ -183,7 +188,7 @@ const Contact = () => {
           </div>
         </section>
 
-       {/* Elfsight Instagram Feed Embed */}
+        {/* Elfsight Instagram Feed Embed */}
         <section className="py-12 bg-black">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center mb-8 text-transparent bg-gradient-to-r from-[#ffcc29] to-[#a020f0] bg-clip-text">
@@ -199,9 +204,7 @@ const Contact = () => {
             </div>
           </div>
         </section>
-
       </div>
-
       <Footer />
     </div>
   );

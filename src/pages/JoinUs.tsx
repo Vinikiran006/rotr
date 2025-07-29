@@ -53,35 +53,49 @@ const JoinUs = () => {
     },
     {
       question: 'What kind of projects will I work on?',
-      answer: 'Projects span across education, health, environment, and community development. From digital literacy programs to tree plantation drives, there\'s something for everyone.'
+      answer: "Projects span across education, health, environment, and community development. From digital literacy programs to tree plantation drives, there's something for everyone."
     }
   ];
 
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
-      
       <div className="pt-20">
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-black via-deep-base to-section-bg">
-          <div className="container mx-auto px-6 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-accent-pink to-button-active bg-clip-text text-transparent">
-              Join Our Community
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Be part of a dynamic community of young leaders committed to creating positive change. 
-              Develop skills, build networks, and make a lasting impact.
-            </p>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSej0Dum4THRYocF3CiHyE1EzpmRthnCd-TbiVmY1bZES5qV6g/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-gradient-to-r from-[#a020f0] via-[#ff5e62] to-[#ffcc29] hover:from-[#ff5e62] hover:to-[#ffcc29] text-white px-6 py-3 text-base font-semibold transition-all duration-300 transform hover:scale-105 border-none shadow-lg rounded-full"
-            >
-              Start Your Journey
-            </a>
-          </div>
-        </section>
+
+        {/* Hero Section with Responsive Background Image */}
+<section
+  className="relative w-full min-h-[55vw] md:min-h-[40vw] lg:min-h-[36vw] flex items-center justify-center overflow-hidden"
+  style={{
+    backgroundImage: "url('/join_us.jpg')",
+    backgroundSize: 'cover',         // Fills both right/left, no gaps!
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center center',
+    backgroundColor: '#111111'
+  }}
+>
+  {/* Overlay for readability */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/30 z-0 pointer-events-none" />
+  <div className="relative z-10 w-full text-center px-4 py-8 flex flex-col items-center">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-accent-pink to-button-active bg-clip-text text-transparent">
+      Join Our Community
+    </h1>
+    <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl md:max-w-3xl mx-auto mb-6">
+      Be part of a dynamic community of young leaders committed to creating positive change. 
+      Develop skills, build networks, and make a lasting impact.
+    </p>
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSej0Dum4THRYocF3CiHyE1EzpmRthnCd-TbiVmY1bZES5qV6g/viewform"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block bg-gradient-to-r from-[#a020f0] via-[#ff5e62] to-[#ffcc29] hover:from-[#ff5e62] hover:to-[#ffcc29] text-white px-6 py-3 text-base font-semibold transition-all duration-300 transform hover:scale-105 border-none shadow-lg rounded-full"
+    >
+      Start Your Journey
+    </a>
+  </div>
+</section>
+
+
+
 
         {/* Why Join Section */}
         <section className="py-20 bg-deep-base">
@@ -94,7 +108,6 @@ const JoinUs = () => {
                 Discover the incredible benefits of being part of our community-focused organization.
               </p>
             </div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <Card 
@@ -130,7 +143,6 @@ const JoinUs = () => {
                   Fill out our registration form and start your journey with Rotaract BMSY.
                 </p>
               </div>
-              
               <Card className="bg-black/50 border-accent-pink/20">
                 <CardContent className="p-8">
                   <div className="bg-gradient-to-r from-purple-highlight/10 to-button-active/10 p-8 rounded-lg border border-accent-pink/20">
@@ -140,7 +152,6 @@ const JoinUs = () => {
                         Complete the form below to express your interest in joining Rotaract Club of BMS Yelahanka.
                       </p>
                     </div>
-                    
                     <div className="w-full flex justify-center">
                       <iframe
                         src="https://docs.google.com/forms/d/e/1FAIpQLSej0Dum4THRYocF3CiHyE1EzpmRthnCd-TbiVmY1bZES5qV6g/viewform?embedded=true"
@@ -173,7 +184,6 @@ const JoinUs = () => {
                   Get answers to common questions about joining Rotaract BMSY.
                 </p>
               </div>
-              
               <Accordion type="single" collapsible className="space-y-4">
                 {faqs.map((faq, index) => (
                   <AccordionItem 
