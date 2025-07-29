@@ -36,7 +36,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-deep-base via-section-bg to-deep-base text-white font-poppins overflow-x-hidden">
       <Header />
 
-      {/* Logo Section - Remove any bottom margin */}
+      {/* Logo Section - Flush with hero, no margin below */}
       <div className="flex justify-center items-center gap-4 sm:gap-10 md:gap-14 mt-24 mb-0 overflow-x-auto">
         <img src="/logos/rotaract-district.png" alt="Rotaract District Logo" className="h-16 sm:h-20 w-auto object-contain" />
         <img src="/logos/bms-yelahanka.jpeg" alt="BMS Yelahanka Logo" className="h-16 sm:h-20 w-auto object-contain" />
@@ -52,36 +52,58 @@ const Index = () => {
         />
       </div>
 
-    <section
-  className="relative flex flex-col items-center justify-center min-h-[60vw] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[650px] mb-0 mx-0 overflow-hidden shadow-xl w-full bg-black"
-  style={{ borderRadius: 0, paddingTop: 0 }}
->
-  <img
-    src="/hero-bg.jpg"
-    alt=""
-    className="absolute inset-0 w-full h-full object-cover"
-    aria-hidden="true"
-    draggable="false"
-    style={{ zIndex: 1, objectPosition: 'center center' }}
-  />
-  <div
-    className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/5 to-transparent"
-    style={{ zIndex: 2 }}
-    aria-hidden="true"
-  />
-  <div className="relative z-10 flex flex-col items-center px-2 py-8 sm:px-8 w-full">
-    <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-center font-poppins
-      bg-gradient-to-r from-[#fffbe0] via-[#ffd700] to-[#bf5af2] text-transparent bg-clip-text drop-shadow-[0_2px_12px_#000]">
-      Welcome to Rotaract Club of BMS Yelahanka
-    </h1>
-    <p className="max-w-xl mx-auto text-base sm:text-lg md:text-lg mb-5 text-center font-poppins text-[#FFFBEA] font-medium drop-shadow-[0_1px_8px_#000]">
-      Empowering young leaders to create positive change through service, fellowship, and professional development.
-    </p>
-    {/* ...buttons... */}
-  </div>
-</section>
+      {/* Hero Section */}
+      <section
+        className="relative flex flex-col items-center justify-center min-h-[60vw] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[650px] mb-0 mx-0 overflow-hidden shadow-xl w-full bg-black"
+        style={{ borderRadius: 0, paddingTop: 0 }}
+      >
+        {/* Blackened/darkened hero image */}
+        <img
+          src="/hero-bg.jpg"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          aria-hidden="true"
+          draggable="false"
+          style={{ zIndex: 1, objectPosition: 'center center' }}
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/20"
+          style={{ zIndex: 2 }}
+          aria-hidden="true"
+        />
+        <div className="relative z-10 flex flex-col items-center px-2 py-8 sm:px-8 w-full">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-center font-poppins
+            bg-gradient-to-r from-[#fffbe0] via-[#ffd700] to-[#bf5af2] text-transparent bg-clip-text drop-shadow-[0_2px_12px_#000]">
+            Welcome to Rotaract Club of BMS Yelahanka
+          </h1>
+          <p className="max-w-xl mx-auto text-base sm:text-lg md:text-lg mb-7 text-center font-poppins text-[#FFFBEA] font-medium drop-shadow-[0_1px_8px_#000]">
+            Empowering young leaders to create positive change through service, fellowship, and professional development.
+          </p>
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-[450px] mx-auto">
+            <Link to="/join" className="flex-1">
+              <Button
+                size="lg"
+                className="w-full bg-gradient-to-r from-[#fffcc1] to-[#fbbf24] hover:from-[#fffcc1] hover:to-[#a020f0] text-black px-6 py-3 sm:px-8 sm:py-3 text-base font-semibold transition-all duration-500 rounded-full shadow-lg border-none font-poppins"
+              >
+                Join Our Community
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+              </Button>
+            </Link>
+            <Link to="/projects" className="flex-1">
+              <Button
+                variant="outline"
+                size="lg"
+                className="w-full border-2 border-[#fffcc1] text-[#fffcc1] bg-transparent hover:bg-[#fbbf24] hover:text-black px-6 py-3 sm:px-8 sm:py-3 text-base font-semibold transition-all duration-500 rounded-full shadow-none font-poppins"
+              >
+                Explore Projects
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
 
-
+      {/* --- Remainder of your page unchanged --- */}
 
       {/* What is Rotary & What is Rotaract */}
       <section className="py-8">
@@ -172,7 +194,7 @@ const Index = () => {
       {/* Moments That Matter (Polaroid Banner) */}
       <PolaroidBanner />
 
-      {/* Initiatives Section - 4 in first row, 3 in second row */}
+      {/* Initiatives Section */}
       <section className="py-16 bg-gradient-to-br from-deep-base via-section-bg to-deep-base">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
