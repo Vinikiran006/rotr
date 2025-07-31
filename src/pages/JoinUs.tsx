@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Users, Award, Network, TrendingUp, Clock, Heart, Globe } from 'lucide-react';
+import { Users, Award, Network, TrendingUp, Clock, Heart, Globe, CheckCircle } from 'lucide-react';
 
 const JoinUs = () => {
   const benefits = [
@@ -17,13 +17,13 @@ const JoinUs = () => {
     {
       icon: Award,
       title: 'Certifications',
-      description: 'Earn recognized certificates for your community service hours and leadership roles.',
+      description: 'Earn recognized certificates and AICTE points for your community service hours and leadership roles.',
       color: 'from-purple-highlight to-button-active'
     },
     {
       icon: Network,
       title: 'Global Network',
-      description: 'Connect with Rotaractors worldwide and build lifelong professional relationships.',
+      description: 'Connect with Rotaractors worldwide and build lifelong professional relationships and friendships.',
       color: 'from-button-active to-accent-pink'
     },
     {
@@ -31,6 +31,13 @@ const JoinUs = () => {
       title: 'Personal Growth',
       description: 'Develop empathy, social responsibility, and a deeper understanding of community needs.',
       color: 'from-accent-pink to-maroon-accent'
+    },
+    {
+      icon: CheckCircle, // or another appropriate icon
+      title: 'Community Service',
+      description:
+        'Make a real impact by engaging in projects that address local and global challenges through volunteer work.',
+      color: 'from-maroon-accent to-purple-highlight'
     }
   ];
 
@@ -108,7 +115,7 @@ const JoinUs = () => {
                 Discover the incredible benefits of being part of our community-focused organization.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
               {benefits.map((benefit, index) => (
                 <Card 
                   key={index}
@@ -116,7 +123,7 @@ const JoinUs = () => {
                 >
                   <CardContent className="p-8 text-center">
                     <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${benefit.color} mb-6`}>
-                      <benefit.icon size={32} className="text-white" />
+                      <benefit.icon size={32} className="text-white"  />
                     </div>
                     <h3 className="text-xl font-bold mb-4 text-white group-hover:text-accent-pink transition-colors duration-300">
                       {benefit.title}

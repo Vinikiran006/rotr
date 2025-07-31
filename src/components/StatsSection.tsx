@@ -124,10 +124,10 @@ const StatsSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   
   const targetCounts = {
-    projects: 1,
+    projects: 2,
     volunteers: 100,
     years: 8,
-    impact: 30
+    impact: 100
   };
 
   useEffect(() => {
@@ -178,7 +178,7 @@ const StatsSection = () => {
   const stats = [
     {
       number: counts.projects,
-      label: 'Project Completed',
+      label: 'Projects Completed',
       suffix: '', // No suffix for projects
     },
     {

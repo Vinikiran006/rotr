@@ -41,7 +41,7 @@ const reviews: Review[] = [
     rating: 5,
   },
   {
-    name: "Vineeth",
+    name: "Vinith",
     text: "Great leadership opportunities and a wonderful team to work with! The mentorship and support from fellow members have helped me grow both personally and professionally. Highly recommend joining if you're looking to make an impact while having fun.",
     rating: 4,
   },
@@ -113,11 +113,11 @@ const Blog: React.FC = () => (
                 className="bg-gradient-to-br from-dark-accent/30 to-purple-accent/30 backdrop-blur-sm rounded-2xl overflow-hidden group hover:bg-gradient-to-br hover:from-purple-accent/40 hover:to-bright-purple/30 transition-all duration-500 border border-accent-pink/20 hover:border-accent-pink/40 transform hover:scale-105"
               >
                 <CardContent className="p-8">
-                  <div className="flex mb-4">
+                  {/* <div className="flex mb-4">
                     {[...Array(review.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 fill-[#ffcc29] text-[#ffcc29] drop-shadow" />
                     ))}
-                  </div>
+                  </div> */}
                   <p className="text-white mb-4 italic text-lg">"{review.text}"</p>
                   <p className="text-[#b983ff] font-semibold">- {review.name}</p>
                 </CardContent>

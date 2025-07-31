@@ -77,8 +77,7 @@ const Team = () => {
           />
           {isCore && (
             <Badge className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-highlight to-button-active text-white">
-              Core Council
-            </Badge>
+              Core Team           </Badge>
           )}
         </div>
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-accent-pink transition-colors duration-300 font-poppins">

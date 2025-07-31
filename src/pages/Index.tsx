@@ -37,7 +37,7 @@ const Index = () => {
       <Header />
 
       {/* Logo Section - Flush with hero, no margin below */}
-      <div className="flex justify-center items-center gap-4 sm:gap-10 md:gap-14 mt-24 mb-0 overflow-x-auto">
+      {/* <div className="flex justify-center items-center gap-4 sm:gap-10 md:gap-14 mt-24 mb-0 overflow-x-auto">
         <img src="/logos/rotaract-district.png" alt="Rotaract District Logo" className="h-16 sm:h-20 w-auto object-contain" />
         <img src="/logos/bms-yelahanka.jpeg" alt="BMS Yelahanka Logo" className="h-16 sm:h-20 w-auto object-contain" />
         <img
@@ -50,7 +50,7 @@ const Index = () => {
           alt="Unite for Good Logo Small"
           className="block sm:hidden h-10 w-auto object-contain"
         />
-      </div>
+      </div> */}
 
       {/* Hero Section */}
       <section
@@ -121,7 +121,7 @@ const Index = () => {
               </div>
               <div className="space-y-3 text-gray-300 leading-relaxed text-center font-poppins text-lg">
                 <p>
-                  <span className="text-white font-semibold">Rotary International</span> is the parent organization that empowers Rotaract clubs worldwide.
+                  <span className="text-white font-semibold">Rotary </span> is a global network of more than 1.2 million neighbors, friends, leaders, and problem-solvers who see a world where people unite and take action to create lasting change – across the globe, in our communities, and in ourselves.
                 </p>
                 <div className="flex items-center justify-center space-x-8 mt-2">
                   <div className="text-center">
@@ -149,7 +149,7 @@ const Index = () => {
             <div className={panelGradient}>
               <div className="text-center mb-3">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-2 overflow-hidden bg-[#1e0b2e] mx-auto">
-                  <img src="/rotaract-logo.png" alt="Rotaract Club Logo" className="w-12 h-12 object-contain" />
+                  <img src="/rotary-logo.png" alt="Rotaract Club Logo" className="w-12 h-12 object-contain" />
                 </div>
                 <h2 className="text-3xl font-bold mb-2 text-transparent bg-gradient-to-r from-purple-highlight to-bright-purple bg-clip-text font-poppins">
                   What is Rotaract?
@@ -157,7 +157,7 @@ const Index = () => {
               </div>
               <div className="space-y-3 text-gray-300 leading-relaxed text-center font-poppins text-lg">
                 <p>
-                  <span className="text-white font-semibold">Rotaract</span> = <span className="text-[#ffcc29]">Rotary</span> + <span className="text-[#ffcc29]">Action</span>
+                  <span className="text-white font-semibold">Rotaract</span> = <span className="text-[#ffcc29]">Rotary</span> in <span className="text-[#ffcc29]">Action</span>
                 </p>
                 <p>
                   A global network for young leaders (ages 18–30) that empowers them to take action, develop leadership skills, and create global friendships.

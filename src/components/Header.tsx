@@ -34,6 +34,11 @@ const Header = () => {
               alt="Rotaract Club of BMS Yelahanka" 
               className="h-12 w-auto"
             />
+            <img
+              src="/logos/unite.png"
+              alt="Unite for Good Logo"
+              className="hidden sm:block h-10 sm:h-12 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}

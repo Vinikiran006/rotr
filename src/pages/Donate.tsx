@@ -2,35 +2,27 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { QrCode, Heart, Users, BookOpen, Stethoscope, Trees } from 'lucide-react';
+import { QrCode, Heart, Users, BookOpen, Stethoscope, Trees, Utensils, Shirt } from 'lucide-react';
 
 const Donate = () => {
   const impactItems = [
     {
-      amount: '₹100',
-      impact: '5 notebooks for underprivileged students',
+      impact: 'Notebooks, pens, and supplies for underprivileged students',
       icon: BookOpen,
       color: 'from-blue-500 to-cyan-600'
     },
     {
-      amount: '₹500',
-      impact: 'Meals for 5 families in need',
-      icon: Heart,
+      impact: 'Nutritious meals for families in need',
+      icon: Utensils,
       color: 'from-red-500 to-pink-600'
     },
     {
-      amount: '₹1000',
-      impact: 'Basic medical supplies for health camps',
-      icon: Stethoscope,
-      color: 'from-green-500 to-emerald-600'
-    },
-    {
-      amount: '₹2000',
-      impact: '10 saplings for environmental projects',
-      icon: Trees,
-      color: 'from-purple-500 to-violet-600'
+      impact: 'Clean and warm clothing for children and adults',
+      icon: Shirt,
+      color: 'from-yellow-500 to-orange-500'
     }
   ];
+  
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -68,7 +60,7 @@ const Donate = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {impactItems.map((item, index) => (
                 <Card 
                   key={index}
@@ -79,7 +71,7 @@ const Donate = () => {
                       <item.icon size={32} className="text-white" />
                     </div>
                     <h3 className="text-2xl font-bold mb-4 text-accent-pink">
-                      {item.amount}
+                      
                     </h3>
                     <p className="text-gray-300 leading-relaxed">
                       {item.impact}
@@ -138,7 +130,7 @@ const Donate = () => {
         </section>
 
         {/* Transparency Section */}
-        <section className="py-20 bg-deep-base">
+        {/* <section className="py-20 bg-deep-base">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
@@ -182,7 +174,7 @@ const Donate = () => {
               
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Thank You Section */}
         <section className="py-18 bg-section-bg">
