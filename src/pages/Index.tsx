@@ -245,6 +245,86 @@ const Index = () => {
           </div>
         </div>
       </section>
+            
+<section className="py-16 bg-[#09060a]">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-extrabold mb-3 text-transparent bg-gradient-to-r from-[#ac2255] via-[#920dc3] to-[#ffd700] bg-clip-text font-poppins">
+        The Four-Way Test
+      </h2>
+      <p className="text-md md:text-lg text-[#bfa7c9] max-w-2xl mx-auto font-normal font-poppins">
+        Four questions that guide all Rotarians in everything we think, say, or do.
+      </p>
+    </div>
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-9">
+      {/* 1. Heart - BENEFICIAL */}
+      <div className="rounded-xl p-7 flex flex-col items-center bg-[#1a1020] shadow-lg">
+        <div className="rounded-lg flex items-center justify-center mb-3 w-20 h-20 bg-[#19141a] border-2 border-[#ffd700]/50 shadow-md">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+            <path d="M28 44s-12-8.5-12-16a8 8 0 0 1 12-6A8 8 0 0 1 40 28c0 7.5-12 16-12 16z"
+              stroke="#edeaf0" strokeWidth="3" fill="none" />
+            <path d="M28 44s-7-5-9-10" stroke="#ffd700" strokeWidth="2" fill="none"/>
+          </svg>
+        </div>
+        <span className="block text-lg mt-2 text-[#edeaf0] text-center font-semibold font-poppins">
+          Will it be <br/>BENEFICIAL?
+        </span>
+      </div>
+
+      {/* 2. Law/Equality - FAIRNESS */}
+      <div className="rounded-xl p-7 flex flex-col items-center bg-[#161014] shadow-lg">
+        <div className="rounded-lg flex items-center justify-center mb-3 w-20 h-20 bg-[#231b2a] border-2 border-[#de0c96]/60 shadow-md">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+            <rect x="14" y="36" width="28" height="6" rx="3" fill="#edeaf0"/>
+            <rect x="26" y="13" width="4" height="22" rx="2" fill="#edeaf0"/>
+            <ellipse cx="20" cy="34" rx="5" ry="2.2" fill="#ffd700"/>
+            <ellipse cx="36" cy="34" rx="5" ry="2.2" fill="#ffd700"/>
+            <rect x="20" y="21" width="16" height="2.6" rx="1.2" fill="#bfa7c9"/>
+            <circle cx="28" cy="9.5" r="2" fill="#ffd700"/>
+          </svg>
+        </div>
+        <span className="block text-lg mt-2 text-[#edeaf0] text-center font-semibold font-poppins">
+          Is it FAIR <br/>to all concerned?
+        </span>
+      </div>
+
+      {/* 3. People icon - GOODWILL */}
+      <div className="rounded-xl p-7 flex flex-col items-center bg-[#120b1a] shadow-lg">
+        <div className="rounded-lg flex items-center justify-center mb-3 w-20 h-20 bg-[#19141a] border-2 border-[#920dc3]/60 shadow-md">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+            <circle cx="28" cy="20" r="7" fill="#edeaf0"/>
+            <circle cx="17" cy="30" r="4.2" fill="#edeaf0"/>
+            <circle cx="39" cy="30" r="4.2" fill="#edeaf0"/>
+            <ellipse cx="28" cy="39" rx="13" ry="4" fill="#19141a" />
+            <circle cx="28" cy="20" r="7" stroke="#ffd700" strokeWidth="1.6"/>
+            <ellipse cx="28" cy="39" rx="13" ry="4" stroke="#ffd700" strokeWidth="1"/>
+            {/* Smiles */}
+            <path d="M25 23 q3 3 6 0" stroke="#ac2255" strokeWidth="1.7" fill="none"/>
+            <path d="M14.7 32.3 q1.5 2 3 0" stroke="#ac2255" strokeWidth="1.2" fill="none"/>
+            <path d="M37.3 32.3 q1.5 2 3 0" stroke="#ac2255" strokeWidth="1.2" fill="none"/>
+          </svg>
+        </div>
+        <span className="block text-lg mt-2 text-[#edeaf0] text-center font-semibold font-poppins">
+          Build GOODWILL <br/>& FRIENDSHIPS?
+        </span>
+      </div>
+
+      {/* 4. Heart - TRUTH */}
+      <div className="rounded-xl p-7 flex flex-col items-center bg-[#1c050f] shadow-lg">
+        <div className="rounded-lg flex items-center justify-center mb-3 w-20 h-20 bg-[#19141a] border-2 border-[#ffd700] shadow-md">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+            <path d="M28 44s-12-8.5-12-16a8 8 0 0 1 12-6A8 8 0 0 1 40 28c0 7.5-12 16-12 16z"
+              stroke="#edeaf0" strokeWidth="3" fill="none" />
+            <path d="M34 31 q-6 7-12 0" stroke="#ffd700" strokeWidth="2" fill="none"/>
+          </svg>
+        </div>
+        <span className="block text-lg mt-2 text-[#edeaf0] text-center font-semibold font-poppins">
+          Is it the <br/>TRUTH?
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Call to Action block */}
       <section className="py-16 bg-gradient-to-br from-deep-base via-dark-purple/20 to-deep-base">
