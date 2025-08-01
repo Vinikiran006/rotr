@@ -83,48 +83,43 @@ const Donate = () => {
           </div>
         </section>
 
-        {/* Donation Methods */}
+        
         <section className="py-20 bg-section-bg">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-16">
+              <div className="text-center mb-12">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  How to Donate
+                  How to donate
                 </h2>
                 <p className="text-xl text-gray-300">
-                  Choose your preferred donation method for a secure and convenient experience.
+                  Fill out our donation form and start your donation journey with Rotaract BMSY.
                 </p>
               </div>
-              
-              <div className="flex justify-center">
-                {/* QR Code Payment */}
-                <Card className="bg-black/50 border-accent-pink/20">
-                  <CardContent className="p-8 text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-highlight to-button-active mb-6">
-                      <QrCode size={32} className="text-white" />
+              <Card className="bg-black/50 border-accent-pink/20">
+                <CardContent className="p-8">
+                  <div className="bg-gradient-to-r from-purple-highlight/10 to-button-active/10 p-8 rounded-lg border border-accent-pink/20">
+                    <div className="text-center mb-6">
+                      <h3 className="text-2xl font-bold text-white mb-4">Donation Form</h3>
+                      <p className="text-gray-300">
+                      Complete the form below to express your interest in donating food, stationery, or clothes.
+                      </p>
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 text-white">UPI Payment</h3>
-                    <p className="text-gray-300 mb-6">
-                      Scan the QR code below to make a quick and secure donation using any UPI app.
-                    </p>
-                    
-                    {/* QR Code Placeholder */}
-                    <div className="bg-white p-8 rounded-lg inline-block mb-6">
-                      <img src="/lovable-uploads/nupreeth-qr.jpg" alt="UPI QR Code" className="w-48 h-48 object-contain rounded-lg" />
+                    <div className="w-full flex justify-center">
+                      <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSe-9XUZSIe8Zx2N8q5kncp6sGJaQ5z4KbgNmNJbJpHaOxlDrQ/viewform?embedded=true"
+                        width="100%"
+                        height={460}
+                        frameBorder={0}
+                        title="Rotaract Registration Form"
+                        className="rounded-lg border-none w-full max-w-2xl"
+                        allowFullScreen
+                      >
+                        Loading…
+                      </iframe>
                     </div>
-                    
-                    <p className="text-sm text-gray-400 mb-4">
-                      UPI ID: nupreeth.off@indianbank
-                    </p>
-                    
-                    <Button 
-                      className="bg-gradient-to-r from-[#a020f0] via-[#ff5e62] to-[#ffcc29] hover:from-[#ff5e62] hover:to-[#ffcc29] text-white font-semibold shadow-lg border-none px-8"
-                    >
-                      Download QR Code
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
