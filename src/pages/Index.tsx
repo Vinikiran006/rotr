@@ -54,7 +54,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <section
-        className="relative flex flex-col items-center justify-center min-h-[60vw] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[650px] mb-0 mx-0 overflow-hidden shadow-xl w-full bg-black"
+        className="relative flex flex-col items-center justify-center min-h-[80vh] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[650px] mb-0 mx-0 overflow-hidden shadow-xl w-full bg-black"
         style={{ borderRadius: 0, paddingTop: 0 }}
       >
         {/* Blackened/darkened hero image */}

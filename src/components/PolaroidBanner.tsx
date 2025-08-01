@@ -2,9 +2,9 @@ import React from "react";
 
 const topRowPolaroids = [
   { id: 1, image: "/lovable-uploads/image1.png", caption: "Pawsitivity", rotation: "rotate-2" },
-  { id: 2, image: "/lovable-uploads/image2.png", caption: "Mind matters", rotation: "-rotate-1" },
+  { id: 2, image: "/lovable-uploads/image2.png", caption: "Hands of hope", rotation: "-rotate-1" },
   { id: 3, image: "/lovable-uploads/image3.png", caption: "Project Disha", rotation: "rotate-1" },
-  { id: 4, image: "/lovable-uploads/image4.jpeg", caption: "Her Stories", rotation: "-rotate-2" },
+  { id: 4, image: "/lovable-uploads/image4.jpeg", caption: "Food for thought", rotation: "-rotate-2" },
   { id: 5, image: "/lovable-uploads/image5.png", caption: "Yes to access", rotation: "rotate-2" },
   { id: 6, image: "/lovable-uploads/image6.png", caption: "Rota hikes", rotation: "-rotate-1" },
 ];
