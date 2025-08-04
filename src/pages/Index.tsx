@@ -59,7 +59,7 @@ const Index = () => {
       >
         {/* Blackened/darkened hero image */}
         <img
-          src="/hero-bg.jpg"
+          src="/bb.jpg"
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
           aria-hidden="true"
