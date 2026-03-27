@@ -8,9 +8,9 @@
 //     years: 0,
 //     impact: 0
 //   });
-  
+
 //   const sectionRef = useRef<HTMLElement>(null);
-  
+
 //   const targetCounts = {
 //     projects: 1,
 //     volunteers: 100,
@@ -46,7 +46,7 @@
 //     const timer = setInterval(() => {
 //       currentStep++;
 //       const progress = currentStep / steps;
-      
+
 //       if (progress >= 1) {
 //         setCounts(targetCounts);
 //         clearInterval(timer);
@@ -120,14 +120,14 @@ const StatsSection = () => {
     years: 0,
     impact: 0
   });
-  
+
   const sectionRef = useRef<HTMLElement>(null);
-  
+
   const targetCounts = {
-    projects: 2,
-    volunteers: 100,
-    years: 8,
-    impact: 100
+    projects: 65,
+    volunteers: 400,
+    years: 9,
+    impact: 500
   };
 
   useEffect(() => {
@@ -158,7 +158,7 @@ const StatsSection = () => {
     const timer = setInterval(() => {
       currentStep++;
       const progress = currentStep / steps;
-      
+
       if (progress >= 1) {
         setCounts(targetCounts);
         clearInterval(timer);
@@ -203,7 +203,7 @@ const StatsSection = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {stats.map((stat, index) => (
-            <div 
+            <div
               key={index}
               className="flex flex-col items-center justify-center text-center rounded-2xl p-8 bg-gradient-to-br from-[#1a1023] to-[#1a1023]/80 border border-[#2d193c] shadow-md"
             >
