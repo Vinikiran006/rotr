@@ -127,7 +127,7 @@ const StatsSection = () => {
     projects: 65,
     volunteers: 400,
     years: 9,
-    impact: 500
+    impact: 3800
   };
 
   useEffect(() => {
@@ -193,7 +193,7 @@ const StatsSection = () => {
     },
     {
       number: counts.impact,
-      label: 'Lives Impacted',
+      label: 'Volunteering hours',
       suffix: '+',
     }
   ];

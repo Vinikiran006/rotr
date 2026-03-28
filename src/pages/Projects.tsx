@@ -451,6 +451,161 @@ const Projects = () => {
       images: ['/ongoingp/n8.png', '/ongoingp/n9.png'],
       description: 'A large-scale book drive collecting 800 books at BMSIT&M. Donated to support a school library, promoting literacy, educational access, and community engagement.'
     },
+    // --- December 2025 Events (Short Descriptions) ---
+{
+  id: 26,
+  title: 'Sanchara to Namma Bengaluru – Incoming Multi-District R.I.D.E',
+  type: 'Fellowship & Cultural Exchange',
+  date: '19th–21st December 2025',
+  images: ['/ongoingp/d01.jpg', '/ongoingp/d02.jpg'],
+  description: 'A three-day cultural exchange hosting delegates from RID 3150. Included city exploration, creative activities, and a Christmas celebration, strengthening inter-district fellowship.'
+},
+{
+  id: 27,
+  title: 'Letterhead Exchange – Rotaract Club of VIT Chennai',
+  type: 'Collaboration',
+  date: 'December 2025',
+  images: ['/ongoingp/d3.jpg'],
+  description: 'A formal exchange to share club visions, service ideas, and best practices. Strengthened inter-club relations and opened doors for future collaborations.'
+},
+{
+  id: 28,
+  title: 'Toolchain Dissection: Inside Professional Workflows',
+  type: 'Professional Development',
+  date: '21st December 2025',
+  images: ['/ongoingp/d4.jpg'],
+  description: 'An online session with industry expert Inesh Jain on real-world workflows and tools. Helped 150+ participants gain practical industry insights.'
+},
+{
+  id: 29,
+  title: 'Pulse Polio Immunization Drive',
+  type: 'Community Service',
+  date: '21st December 2025',
+  images: ['/ongoingp/d5.jpg', '/ongoingp/d6.jpg'],
+  description: 'A large-scale health drive supporting polio eradication efforts. Volunteers assisted in vaccinating over 6,000 children across multiple locations.'
+},
+{
+  id: 30,
+  title: 'Blanket Drive 2025',
+  type: 'Community Service',
+  date: '13th December 2025',
+  images: ['/ongoingp/d7.jpg'],
+  description: 'A winter relief initiative distributing blankets to underprivileged communities. Promoted empathy, service, and inter-club collaboration.'
+},
+{
+  id: 31,
+  title: 'Inter-District Letterhead Exchange – Sanchara 3192',
+  type: 'Collaboration',
+  date: '21st December 2025',
+  images: ['/ongoingp/d8.jpg', '/ongoingp/d9.jpg'],
+  description: 'An inter-district exchange focused on leadership, service ideas, and collaboration. Strengthened connections across multiple Rotaract clubs.'
+},
+{
+  id: 32,
+  title: 'Walk for the Lake – Save Avalahalli Lake',
+  type: 'Environmental',
+  date: '7th December 2025',
+  images: ['/ongoingp/d10.jpg', '/ongoingp/d11.jpg'],
+  description: 'A 2.5 km awareness walk promoting lake conservation. Volunteers ensured smooth execution and boosted environmental awareness.'
+},
+{
+  id: 33,
+  title: 'Share the Warmth',
+  type: 'Community Service',
+  date: '15th–17th December 2025',
+  images: ['/ongoingp/d12.jpg', '/ongoingp/d13.jpg'],
+  description: 'A winter clothing donation drive in collaboration with NCC. Collected and distributed essentials to support vulnerable communities.'
+},
+{
+  id: 34,
+  title: 'Rota Hikes 5.0 – Kaurava Kunda Trek',
+  type: 'Fellowship & Adventure',
+  date: '6th December 2025',
+  images: ['/ongoingp/d14.jpg', '/ongoingp/d15.jpg'],
+  description: 'A trekking event with 150 participants promoting fitness and teamwork. Strengthened bonding through adventure and outdoor activities.'
+},
+{
+  id: 35,
+  title: 'Quarter 2 General Body Meeting (GBM)',
+  type: 'Club Administration',
+  date: '31st December 2025',
+  images: ['/ongoingp/d16.jpg', '/ongoingp/d17.jpg'],
+  description: 'Quarterly meeting reviewing achievements, reports, and future plans. Concluded with recognitions and New Year celebrations.'
+},
+// --- January 2026 Events ---
+{
+  id: 36,
+  title: 'Tree Geo-Tagging Initiative',
+  type: 'Collaboration',
+  date: '11th January 2026',
+  images: ['/ongoingp/j1.jpg', '/ongoingp/j2.jpg'],
+  description: 'A sustainability initiative with Green Circle where 25 volunteers geo-tagged ~170 trees using digital tools. Promoted biodiversity awareness and tech-driven environmental monitoring.'
+},
+{
+  id: 37,
+  title: 'Republic Day Book Donation Initiative',
+  type: 'Standalone',
+  date: '26th January 2026',
+  images: ['/ongoingp/j3.jpg', '/ongoingp/j4.jpg'],
+  description: 'Collected and distributed 800+ books to school students with community support. Strengthened educational access and encouraged responsible giving.'
+},
+{
+  id: 38,
+  title: 'Distributed Systems Technical Session',
+  type: 'Collaboration',
+  date: '3rd January 2026',
+  images: ['/ongoingp/j5.jpg', '/ongoingp/j6.jpg'],
+  description: 'An online session with 80+ participants covering data replication, consistency, and real-world system design. Enhanced technical and analytical understanding.'
+},
+{
+  id: 39,
+  title: 'Personal Finance & Fiscal Prudence Session',
+  type: 'Collaboration',
+  date: '28th January 2026',
+  images: ['/ongoingp/j7.jpg', '/ongoingp/j8.jpg'],
+  description: 'A financial literacy session with 60+ participants focusing on budgeting, saving, and long-term planning. Simplified concepts through practical examples.'
+},
+{
+  id: 40,
+  title: 'AI in Defence & Aerospace Pre-Summit',
+  type: 'Participatory',
+  date: '23rd January 2026',
+  images: ['/ongoingp/j9.jpg'],
+  description: 'A national-level exposure program at BEL with limited participants. Provided insights into AI applications in defence, aerospace, and security.'
+},
+{
+  id: 41,
+  title: 'President–Secretary Leadership Meet',
+  type: 'Participatory',
+  date: '11th January 2026',
+  images: ['/ongoingp/j10.jpg'],
+  description: 'A district-level leadership meet with 120+ participants reviewing progress and sharing best practices. The club received Gold Recognition for Quarter 2.'
+},
+// --- February 2026 Events ---
+{
+  id: 42,
+  title: 'ROTACAMP 2026',
+  type: 'Host Club',
+  date: '27th February – 1st March 2026',
+  images: ['/ongoingp/f1.jpg', '/ongoingp/f2.jpg'],
+  description: 'A flagship district event with 118 participants where our club served as Host Club. Led planning, logistics, and execution while recording the highest participation with 48 members.'
+},
+{
+  id: 43,
+  title: 'ROTASIA 2026',
+  type: 'Participatory',
+  date: '5th – 8th February 2026',
+  images: ['/ongoingp/f3.jpg', '/ongoingp/f4.jpg'],
+  description: 'An international Rotaract event in Chennai attended by 2 members. Enabled global networking, leadership exposure, and cultural exchange across South Asia.'
+},
+{
+  id: 44,
+  title: 'BOD Monthly Meeting',
+  type: 'Meeting',
+  date: '20th February 2026',
+  images: ['/ongoingp/f5.jpg'],
+  description: 'A strategic meeting reviewing past initiatives and planning upcoming projects. Focused on execution goals, avenue-wise updates, and structured action plans for the term.'
+}
   ];
 
   return (
