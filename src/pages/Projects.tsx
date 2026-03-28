@@ -521,7 +521,7 @@ const Projects = () => {
   title: 'Rota Hikes 5.0 – Kaurava Kunda Trek',
   type: 'Fellowship & Adventure',
   date: '6th December 2025',
-  images: ['/ongoingp/d14.jpg', '/ongoingp/d15.jpg'],
+  images: ['/ongoingp/d14.png', '/ongoingp/d15.png'],
   description: 'A trekking event with 150 participants promoting fitness and teamwork. Strengthened bonding through adventure and outdoor activities.'
 },
 {
