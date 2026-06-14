@@ -4,7 +4,8 @@ import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 
 interface Newsletter {
-  image: string;
+  title?: string;
+  image?: string;
   link: string;
 }
 
@@ -24,6 +25,15 @@ const newslettersNew: Newsletter[] = [
     image: "/newsletters/t2.png",
     link: "/newsletters/t2.pdf",
   },
+  {
+    image: "/newsletters/t3.png",
+    link: "/newsletters/t3.pdf",
+  },
+  {
+    image: "/newsletters/t4.png",
+    link: "/newsletters/t4.pdf",
+  },
+
 ];
 
 /* ----------- 2024-2025 (OLD) ----------- */
@@ -95,10 +105,17 @@ const Blog: React.FC = () => (
                 key={"new-" + index}
                 className="flex flex-col items-center bg-gradient-to-b from-gray-900/90 to-gray-800/80 rounded-2xl overflow-hidden border-none w-[260px] min-h-[450px]"
               >
-                <img
-                  src={nl.image}
-                  className="w-full h-[400px] object-cover object-top"
-                />
+                {nl.image ? (
+                  <img
+                    src={nl.image}
+                    className="w-full h-[400px] object-cover object-top"
+                  />
+                ) : (
+                  <div className="w-full h-[400px] flex flex-col items-center justify-center bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-6 text-center">
+                    <span className="text-3xl font-bold text-white drop-shadow-md mb-2">New Release</span>
+                    <span className="text-xl font-medium text-white/90">{nl.title || "Newsletter"}</span>
+                  </div>
+                )}
                 <CardContent className="flex flex-col items-center py-5">
                   <a
                     href={nl.link}
@@ -124,10 +141,17 @@ const Blog: React.FC = () => (
                 key={"old-" + index}
                 className="flex flex-col items-center bg-gradient-to-b from-gray-900/90 to-gray-800/80 rounded-2xl overflow-hidden border-none w-[260px] min-h-[450px]"
               >
-                <img
-                  src={nl.image}
-                  className="w-full h-[400px] object-cover object-top"
-                />
+                {nl.image ? (
+                  <img
+                    src={nl.image}
+                    className="w-full h-[400px] object-cover object-top"
+                  />
+                ) : (
+                  <div className="w-full h-[400px] flex flex-col items-center justify-center bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-6 text-center">
+                    <span className="text-3xl font-bold text-white drop-shadow-md mb-2">New Release</span>
+                    <span className="text-xl font-medium text-white/90">{nl.title || "Newsletter"}</span>
+                  </div>
+                )}
                 <CardContent className="flex flex-col items-center py-5">
                   <a
                     href={nl.link}
